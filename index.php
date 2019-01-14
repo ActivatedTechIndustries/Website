@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	
-// Andrew was here
-// F0ntes was here too
 
 	require "start_db.php";
 ?>
@@ -27,6 +24,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<?php include 'timer.php';?>
+
+	<!--// Andrew was here
+	// F0ntes was here too-->
 	
 
 </head>
