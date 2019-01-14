@@ -1,7 +1,8 @@
 <?php
 	session_start();
 	
-//Andrew was here
+// Andrew was here
+// F0ntes was here too
 
 	require "start_db.php";
 ?>
