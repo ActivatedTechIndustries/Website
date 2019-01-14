@@ -1,6 +1,8 @@
 <?php
 	session_start();
 	
+//Andrew was here
+
 	require "start_db.php";
 ?>
 <!DOCTYPE html>
