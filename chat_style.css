@@ -1,0 +1,43 @@
+	.btn-outline-open
+			{
+				color:white !important; 
+				border-color:purple !important;
+				width: 100% !important;
+				height:85vh !important;
+				background-color:purple !important;		
+			}
+			
+			.btn-outline-open:hover
+			{
+				color:lightgray !important; 
+				background-color:transparent !important;
+			}
+			
+			.btn-outline-close
+			{
+				color:white !important; 
+				border-color:gray !important;
+				width: 100% !important;
+				height:85vh !important;
+				background-color:#4A8BF1 !important;
+			}
+			
+			.btn-outline-close:hover
+			{
+				color:lightgray !important; 
+				background-color:transparent !important;
+			}
+		.Open_left
+		{
+			min-height:20px;
+			display: inline-block;
+			width: 0px;
+			min-width: 40px; /*changed width to min-width */
+			float: right;
+			-webkit-transition: 2s;
+			transition: 2s;
+			height:85vh;
+			background-color:lightgray;
+			border-radius: 15px;
+		}
+		
