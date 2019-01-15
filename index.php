@@ -24,10 +24,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<!--<?php include 'timer.php';?>-->
+	<?php include 'random_functions.php';?>
+	
+	<script>
+	function At_Load()
+	{
+		//Page_View_Counter(); // View Counter Function
+		News(); // News Randomizer Function
+		Counters();
+	}
+	</script>
 	
 </head>
 
-<body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="Page_View_Counter()">
+<body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="AtLoad();">
 
         <?php include 'default_navbar.php';?>
   <!--//////////////////////////////////////////////////////////////////////////////////////////// Carousel ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
