@@ -16,8 +16,7 @@ function News(){
 	}
 	else
 	{
-		echo"
-			alert('Ordem Executada com Sucesso 1');";
+		echo"Ordem Executada com Sucesso 1";
 
 		$number=0;
 		$number = rand(1, mysqli_num_rows($resultado));
@@ -41,8 +40,7 @@ function News(){
 		}
 		else
 		{
-			echo"
-				alert('Ordem Executada com Sucesso 2');";
+			echo"Ordem Executada com Sucesso 2";
 				
 			while($registo = mysqli_fetch_array($resultado))
 			{
@@ -77,8 +75,7 @@ function Total_Website_Views()
 	}
 	else
 	{
-		echo"
-			alert('Ordem Executada com Sucesso');";
+		echo"Ordem Executada com Sucesso";
 				
 			//echo $registo;exit();
 			
@@ -110,8 +107,7 @@ function Total_Online_Users()
 	}
 	else
 	{
-		echo"
-			alert('Ordem Executada com Sucesso');";
+		echo"Ordem Executada com Sucesso";
 				
 			//echo $registo;exit();
 			
@@ -143,8 +139,7 @@ function Total_Registered_Users()
 	}
 	else
 	{
-		echo"
-			alert('Ordem Executada com Sucesso');";
+		echo"Ordem Executada com Sucesso";
 				
 			//echo $registo;exit();
 			
