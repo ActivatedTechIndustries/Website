@@ -89,11 +89,11 @@
 			<!--Para telemovel-->
 			<div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;">
 					<div class="hovereffect">
+					<h1 id="Title" align="center" style="color:white;margin-top: 5%;background-color: #333;"><?php echo $Title ?></h1>
 					<div class="overlay " style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
-						<p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;"> Conteudo </p>
-						<h2 style="margin-bottom:2%;">Hover effect 1</h2>
+						<p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">?php echo $Content ?></p>
+						<h2 style="margin-bottom:2%;"><?php echo $Title ?></h2>
 						<br>
-						<a class="info " style="margin-bottom:1%; margin-right:2%;" href="Login.html">link here</a>	
 					</div>
 					</div>
 			</div>
