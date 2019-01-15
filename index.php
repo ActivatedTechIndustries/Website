@@ -148,17 +148,17 @@
 									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center; "> What we've done: </h1>
 									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center; margin-top: 17%;">Total Website Views</p>
-									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"> 175 004 </h3>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Website_Views; ?></h3>
 									<br>
 									
 									<hr style="background-color: white; width:15vw; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center;">    Online Users</p>
-									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"> 4 839 </h3>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Online_Users; ?></h3>
 									<br>
 									
 									<hr style="background-color: white; width:10vw; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center;">  Registered Users</p>
-									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"> 15 635 </h3>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Registererd_Users; ?></h3>
 									<br><br>
 							</div>
 
