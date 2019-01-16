@@ -1,5 +1,7 @@
 <?php
-		
+			
+		require "start_db.php";
+
 		if(isset($_POST["Total_View"]) || isset($_POST["Parsed_View"]))
 		{
 				if(isset($_POST["Parsed_View"]))
