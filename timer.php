@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 // ------------------------------------- View Counter - Beggining ------------------------------------- //	
 	
@@ -19,11 +20,7 @@
 	
 				
 		function Page_View_Counter(){
-				var timeleft = 5;
 				var downloadTimer = setInterval(function(){
-				  --timeleft;
-				  
-				  if(timeleft <= 0){
 					
 						clearInterval(downloadTimer);
 					  
@@ -58,9 +55,7 @@
 						
 						} // Remove This Comment Piece To Work -  Unable to Testing Platform
 				  
-				  }   
-				  
-				},1000);
+				},5000);
 		}
 		
 // ------------------------------------- View Counter - 2 ------------------------------------- //	

@@ -49,9 +49,6 @@ function News(){
 				$Image = $registo["image"];
 			}
 				
-				echo $Title;
-				echo $Content;
-				echo $Image;
 		}
 	}
 					

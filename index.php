@@ -23,13 +23,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<?php //include 'timer.php';?>
+	<?php include 'timer.php';?>
 	<?php include 'random_functions.php';?>
 	
 	<script>
 	function At_Load()
 	{
-		//Page_View_Counter(); // View Counter Function
+		Page_View_Counter(); // View Counter Function
 		News(); // News Randomizer Function
 		Counters();
 	}
@@ -77,12 +77,12 @@
     <span class="sr-only" >Next</span>
   </a>
 </div>
-			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;">
+			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
 					<div class="hovereffect d-flex justify-content-center">
-					<h1 style="color:white;"> Hello People</h1>
+					<h1 style="color:white;"><?php echo $Title ?></h1>
 					<div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:29.5vw;">
-						<p class="d-flex justify-content-center" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;"> Conteudo </p>
-						<h2 style="width:100%;">Hover effect 1</h2>
+						<p class="d-flex justify-content-center" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;"><?php echo $Content ?></p>
+						<h2 style="width:100%;"><?php echo $Title ?></h2>
 					</div>
 					</div>
 			</div>
