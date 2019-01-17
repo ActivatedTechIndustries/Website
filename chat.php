@@ -19,26 +19,79 @@
 function openLeftMenu() {
 	document.getElementById("leftMenu").style.display = "block";
 	document.getElementById("open").hidden = true;
-	document.getElementById("close").hidden = false;			 
+	document.getElementById("close").hidden = false;			
 	document.getElementById("container_open").style="width:20vw";
-	
 }
 
 function closeLeftMenu() {
-  document.getElementById("leftMenu").style.display = "none";
-   document.getElementById("close").hidden = true;
-	document.getElementById("open").hidden = false;
 	document.getElementById("container_open").style="width:40px";
+	document.getElementById("leftMenu").style.display = "none";
+	document.getElementById("close").hidden = true;
+	document.getElementById("open").hidden = false;
 }
-function Open_Conversation() {
-	document.getElementById("conversation").hidden = false;	
-}		
+function Show_Text() {
+	document.getElementById("Text_News").hidden = false;
+}
+function Hide_Text() {
+	document.getElementById("Text_News").hidden = true;
+}
+function openchatroom() {
+	
+	if (document.getElementById("conversation").style.visibility != "visible")
+	{
+	document.getElementById("conversation").style.visibility = "visible";
+	document.getElementById("conversation").style.marginTop = "0vh";
+	document.getElementById("conversation").style.transition = "3s";
+	document.getElementById("conversation").style.height = "85vh";
+	document.getElementById("conversation").style.transition = "2s";
+	document.getElementById("conversation").style.width="50%";
+
+	}
+	else
+	{
+	document.getElementById("conversation").style.marginTop = "40vh";
+	document.getElementById("conversation").style.transition = "1.5s";
+	document.getElementById("conversation").style.height = "0px";
+	document.getElementById("conversation").style.width = "0px";
+	document.getElementById("conversation").style.visibility = "Hidden";
+	}
+}
+function Show_Containers()
+{
+	if (document.getElementById("conversation").style.visibility == "visible")
+	{
+		document.getElementById("container_head").style.visibility = "visible";
+		document.getElementById("container_body").style.visibility = "visible";
+		document.getElementById("container_footer").style.visibility = "visible";
+	}
+	else
+	{
+		document.getElementById("container_head").style.visibility = "hidden";
+		document.getElementById("container_body").style.visibility = "hidden";
+		document.getElementById("container_footer").style.visibility = "hidden";
+	}
+}
+
+function openchatroom_tele() {
+	
+	if(document.getElementById("conversation_tele").style.visibility != "visible")
+	{
+		document.getElementById("conversation_tele").style.visibility = "visible";
+	}
+	else
+	{
+		document.getElementById("conversation_tele").style.visibility = "hidden";	
+	}
+	
+}
 </script>
 <style>
 	body
 	{
 		max-width:100%;
+		max-height:100%;
 		overflow-x:hidden;
+		overflow-y:hidden;
 		background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);
 		background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);
 		background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);
@@ -70,7 +123,7 @@ function Open_Conversation() {
 	::placeholder
 	{
 		color:black;
-		margin-left:2vw;
+		margin-left:5vw;
 	}
 </style>
 		
@@ -130,13 +183,13 @@ function Open_Conversation() {
 				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
 				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
 				<div class="row">
-				<div class="col-md-12 Container_Friends_first">
-					<p onclick="Open_Conversation()">Amigo</p>
+				<div class="col-md-12 Container_Friends_first" onclick="openchatroom();setTimeout(Show_Containers, 600);">
+					<p >Amigo</p>
 				</div>
 				</div>
 				<div class="row">
 				<div class="col-md-12 Container_Friends">
-					<p onclick="Open_Conversation()">Amigo</p>
+					<p>Amigo</p>
 				</div>
 				</div>
 				<div class="row">
@@ -176,12 +229,78 @@ function Open_Conversation() {
 				</div>
 				</div>
 		</div>
-		<div class="container-fluid d-none d-md-block" style="max-width:25%; max-height:90vh;float:right;">
-		<div class="container" style="max-width:2vw;float:right;">
+		<!--Para telemovel-->		
+		<div class="container-fluid d-sm-none" style="max-width:40%; float:left;">
+				<div class="container-fluid text-center " style="height:15vh; border-radius: 10px; background:#4A8BF1">
+				<div class="row">
+				<div class="col-md-12" style="height:6vh; overflow:hidden">
+				<img href="#" src="Imagens/icon-fb.png" style="height:6vh; float:left;padding:10px 0px 0px">
+				<p style="padding:10px 0px 0px; cursor:default;"> Nome da pessoa</p>
+				</div>
+				</div>
+				<hr style="background:white; width:95%; border-width:1px;border-radius:50px">
+				<div class="row">
+				<div class="col-md-12" style="overflow:auto;height:3.5vh;">
+				<p> Dados da pessoa facebook, twitter, mail etc</p>
+				</div>
+				</div>
+				</div>
+				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
+				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
+				<div class="row">
+				<div class="col-md-12 Container_Friends_first" onclick="openchatroom_tele()">
+					<p >Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-12 Container_Friends">
+					<p>Amigo</p>
+				</div>
+				</div>
+				</div>
+		</div>
+		<!------------------------------------------------------------------>
+		<div class="container-fluid d-none d-md-block" style="max-width:25%;max-height:90vh;float:right;">
+		<div class="container-fluid" style="max-width:2vw;float:right;">
 		<div class="row">
 		<div class="col-md-12">
-		<button id="open" class="btn btn-outline-open" style="font-size:30px" onclick="openLeftMenu()">+</button>
-		<button id="close" class="btn btn-outline-close" onclick="closeLeftMenu()" hidden>X</button>		
+		<button id="open" class="btn btn-outline-open" style="font-size:30px;" onclick="openLeftMenu(); setTimeout(Show_Text, 1500);"><p style="margin-left:-0.6vw">+<p></button>
+		<button id="close" class="btn btn-outline-close" style="font-size:18px;" onclick="closeLeftMenu();Hide_Text()" hidden><p style="margin-left:-0.25vw">X<p></button>		
 		</div>
 		</div>
 		</div>
@@ -189,22 +308,63 @@ function Open_Conversation() {
 			<div class="container Open_left" id="container_open" style="width: 40px;">
 			<div class="row">
 			<div class="col-md-12">
-			<p> NEWS</p>
+			<p id="Text_News" hidden> NEWS</p>
 			</div>
 			</div>
 			</div>
 		</div>
 		</div>
-		<div id="conversation" class="container-fluid d-none d-md-block" style="visibility:visible;overflow:hidden;background:darkgray;max-width:50%; border-radius: 15px;" >
-			<div class="row">
-				<div class="col-md-12" style="background:darkgray; height:75vh;">
+		<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
+			<div class="row" style="height:75vh">
+				<div class="col-md-12" style="background:darkgray;">
 					<br>
-					<div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
+					<div id="container_head"class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;visibility:hidden">
 					<div class="row">
 					<div class="col-md-1">
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
 					</div>
 					<div class="col-md-10">
+					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
+					</div>
+					</div>
+					</div>
+					<br>
+					<div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
+					<div class="row">
+					<div class="col-md-10" align="right">
+					<p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
+					</div>
+					<div class="col-md-1">
+					<img style="max-height:40px;" src="Imagens/user_icon.png">
+					</div>
+					</div>
+					</div>
+				</div>
+				</div>	
+				<div class="row" style="height:10vh;">
+				<div id="container_footer" class="col-md-12" style="background:darkgray; border-radius: 15px;visibility:hidden">
+					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
+					<div class="row">
+					<div class="col-md-12" align="right">
+					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">				
+					</div>
+					</div>
+					</div>
+				</div>
+				</div>				
+		</div>
+		<!--Para telemovel-->
+			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:86vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
+			<div class="row" style="height:75vh">
+				<div class="col-md-12" style="background:darkgray;">
+					<br>
+					<div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
+					<div class="row">
+					<div class="col-md-1">
+					<img style="max-height:40px;" src="Imagens/user_icon.png">
+				
+					</div>
+					<div class="col-md-11">
 					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
 					</div>
 					</div>
@@ -222,8 +382,8 @@ function Open_Conversation() {
 					</div>
 				</div>
 				</div>	
-				<div class="row">
-				<div class="col-md-12" style="background:darkgray; height:10vh; border-radius: 15px;">
+				<div class="row" style="height:10vh;">
+				<div class="col-md-12" style="background:darkgray; border-radius: 15px;">
 					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
 					<div class="row">
 					<div class="col-md-12" align="right">
@@ -234,116 +394,7 @@ function Open_Conversation() {
 				</div>
 				</div>				
 		</div>
-	
-		<!--Para Telemovel-->
-				<div class="container-fluid d-block d-sm-none" style="max-width:40%; float:left;">
-				<div class="container-fluid text-center " style=" border-radius: 10px; background:#4A8BF1">
-				<div class="row">
-				<div class="col-md-12" style="height:15vh; overflow:auto">
-				<p> Dados da pessoa facebook, twitter, mail etc</p>
-				</div>
-				</div>
-				</div>
-				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
-				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
-				<div class="row">
-				<div class="col-md-12 Container_Friends_first">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				</div>
-		</div>
-			<div class="container-fluid Container_Chat d-block d-sm-none" style="background:transparent;">
-			<div class="row">
-				<div class="col-md-12" style="background:darkgray; height:85vh; border-radius: 15px;">
-					<br>
-					<div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
-					<div class="row">
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="./Activated Tech Industries_files/user_icon.png">
-					</div>
-					<div class="col-md-10">
-					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
-					</div>
-					</div>
-					</div>
-					<br>
-					<div class="container-fluid" style=" padding:10px 0px 0px; ">
-					<div class="row">
-					<div class="col-md-10" align="right">
-					<p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
-					</div>
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="./Activated Tech Industries_files/user_icon.png">
-					</div>
-					</div>
-					</div>
-					<div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
-					<div class="row">
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="./Activated Tech Industries_files/user_icon.png">
-					</div>
-					<div class="col-md-10">
-					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
-					</div>
-					</div>
-					</div>
-					<br>
-					<div class="container-fluid" style=" padding:10px 0px 0px; ">
-					<div class="row">
-					<div class="col-md-1" align="right">
-					<img style="height:40px;" src="./Activated Tech Industries_files/folder.png">
-					</div>
-					<div class="col-md-11" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">
-					</div>
-					
-					</div>
-					</div>
-				</div>
-				</div>		
-				</div>	
-		<!--Fim de telemovel-->
+		<!------------------------------------------------------------------>
 		  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
