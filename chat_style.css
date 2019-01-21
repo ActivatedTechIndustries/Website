@@ -2,7 +2,7 @@
 			{
 				color:white !important; 
 				border-color:purple !important;
-				width: 100% !important;
+				width: 2.1vw !important;
 				height:85vh !important;
 				background-color:purple !important;		
 			}
@@ -16,8 +16,8 @@
 			.btn-outline-close
 			{
 				color:white !important; 
-				border-color:gray !important;
-				width: 100% !important;
+				border-color:#4A8BF1 !important;
+				width: 2.1vw !important;
 				height:85vh !important;
 				background-color:#4A8BF1 !important;
 			}
@@ -40,4 +40,3 @@
 			background-color:lightgray;
 			border-radius: 15px;
 		}
-		
