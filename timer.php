@@ -20,16 +20,16 @@
 
 						clearInterval(downloadTimer);
 						
-						alert("Entrou");
+						//alert("Entrou");
 				
 						if ( localStorage.view)
 						{
-								alert("IP Already Viewed The Website");
+								//alert("IP Already Viewed The Website");
 							<?php //echo "//IP Already Viewed The Website"; ?>
 						}
 						else
 						{
-							alert("IP View with Success");
+							//alert("IP View with Success");
 							<?php //echo "//IP View with Success"; ?>
 							localStorage.view = "true";
 							
@@ -39,39 +39,39 @@
 									Parsed_View: true
 								}
 							,function(resposta, estado){
-							alert(resposta + " " + estado);})
+							/*alert(resposta + " " + estado);*/})
 									.done(function() {
-			alert( "sucesso" );
+			//alert( "sucesso" );
 		})
 		.fail(function() {
 			alert( "erro" );
 		})
 		.always(function() {
-			alert( "terminou" );
+			//alert( "terminou" );
 		});
 						}
 						
 						if(view != 1)
 						{
-							alert("Total View");
+							//alert("Total View");
 		$.post(
 			"post_timer.php",
 			{
 				Total_View:  true
 			},
 			function(resposta, estado) {
-				alert(resposta + " " + estado);
+				/*alert(resposta + " " + estado);*/
 				//$("#contentor").prop("innerHTML", resposta);
 			}
 		)
 		.done(function() {
-			alert( "sucesso" );
+			//alert( "sucesso" );
 		})
 		.fail(function() {
 			alert( "erro" );
 		})
 		.always(function() {
-			alert( "terminou" );
+			//alert( "terminou" );
 		});
 							// Não definida, logo adiciona uma view ás Total Views
 						
