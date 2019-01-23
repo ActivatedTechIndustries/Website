@@ -191,23 +191,28 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-bottom: 5vh;">
 		<!-- ///////////////////////////////////// Row 1  /////////////////////////////////////-->
 			<div class="row justify-content-center align-items-center">
-				<div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel" style="width:100%;background-color:#333;height:30vh;border-right-color:transparent;">
-				  <ol class="carousel-indicators" id="Carousel_Indexs">  <!-- Carousel ID !!!!! -->
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				  </ol>
+				<div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel" style="width:100%;background-color:#333;height:30vh;max-height:30vh;border-right-color:transparent;">
 				  <div  class="carousel-inner">
 					<div class="carousel-item active " >
 						<br>
-					  <img class="d-block" style="height:15vh;max-width:30%;"  src="Imagens/logo_white.png" alt="First slide">
-					  <h4 class="text-center" style="color: white;">Activated Tech Industries</h4>
-					  <br>
-					</div>
-					<div class="carousel-item" >
-						<br>
-					  <img class="d-block"  style="height:15vh;max-width:30%;"  src="Imagens/Warden_Logo.png" alt="Second slide">
-					  <h4 class="text-center" style="color: white;">Warden</h4>
-						<br>
+						<div class="container-fluid">
+							<div class="row">
+							<div class="col-md-2">
+									</div>
+									<div class="col-md-4">
+										<img class="d-block" style="height:15vh;"  src="Imagens/logo_white.png">
+										<h4 class="text-center" style="color: white;">Activated Tech Industries</h4>
+									</div>
+									<div class="col-md-4">
+										<img class="d-block"  style="height:15vh;" src="Imagens/Warden_Logo.png">
+										<h4 class="text-center" style="color: white;" >Warden</h4>
+									</div>
+									<div class="col-md-2">
+									</div>
+							</div>
+						</div>
+					  
+					  
 					</div>
 				  </div>
 				</div>
