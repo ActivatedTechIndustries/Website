@@ -51,13 +51,13 @@ $(document).ready(function(){
 		$(document).ready(function(){
 				$(".rainbowWrap").hover(function(){
 				
-					
+					$(this).children().next().focus();
 					$(this).css({"opacity": "1"});
 					$(this).children().children().css({"width": "100.5%"});
 					
 				}, function(){
 					
-					if($(this).children().next().val() == "" && $(this).children().next().focus() == false)
+					if($(this).children().next().val() == "")
 					{
 					//alert("1");
 					$(this).css({"opacity": "0.5"});
