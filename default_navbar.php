@@ -396,5 +396,24 @@ $(document).ready(function(){
 			document.getElementById("footer").style.filter= "blur(0px)";
 			document.getElementById("container_2_Tele").style.filter= "blur(0px)";			
 		}
+	
+		$(document).keyup(function(e) {
+		     if (e.key === "Escape") { // escape key maps to keycode `27`
+
+						 if(document.getElementById("Login_Overlay").style.display == "block")
+						 {
+							LoginOff();
+							Blur_Off();
+						 }
+
+						 else if(document.getElementById("Register_Overlay").style.display == "block")
+						 {
+							RegisterOff();
+							Blur_Off();
+						 }
+
+
+					}
+				});
 		
 		</script>
