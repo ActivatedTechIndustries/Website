@@ -19,6 +19,7 @@
 	<link  href="scrollbar.css" rel="stylesheet">
 	<!--font do texto-->
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<!-------------------->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -145,7 +146,7 @@
 							
 							<div class="col-md-4 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo  h-50 text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);">
 							
-									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center; "> What we've done: </h1>
+									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
 									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center; margin-top: 17%;">Total Website Views</p>
 									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Website_Views; ?></h3>
@@ -168,7 +169,7 @@
 							<br>
 							<div class="col-md-4 col-lg-4 col-xl-4 col-sm-4 h-50 Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);">
 
-                                    <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1); "> Data Science </h1>
+                                    <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
                                     <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
 
                                     <p style="color:white; font-weight: bold; text-align:center; margin-top: 17%;"> As company and as consumers ourselves,</p>
