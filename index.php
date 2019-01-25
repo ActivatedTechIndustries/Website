@@ -245,8 +245,10 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-top: 5vh; margin-bottom: 5vh;">
 		
 		<!-- ///////////////////////////////////// Row 2  /////////////////////////////////////-->
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">                 
+				<div class="col-md-2"></div>
+				<div class="col-md-4">                 
 				
 					<ul style="color: #50c1e5;">
 					<h4 style="color: #50c1e5;">About</h4>
@@ -274,7 +276,7 @@
 				
 				</div> 
 				
-				<div class="col-md-6">                 
+				<div class="col-md-4">                 
 				
 					<ul style="color: #50c1e5;">
 					<h4 style="color: #50c1e5;">Contacts</h4>
@@ -301,7 +303,8 @@
 				
 				
 				</div> 
-				
+				<div class="col-md-2"></div>
+				</div>
 			</div>
 			
 			<!-- ///////////////////////////////////// Row 2 End /////////////////////////////////////-->
