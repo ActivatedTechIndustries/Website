@@ -24,8 +24,8 @@
 					if(!$resultado)
 					{
 					
-						echo"
-							alert('Não foi possível ligar á base de dados (Ordem não executada)');";
+						echo"<script>
+							alert('Não foi possível ligar á base de dados (Ordem não executada)');window.location.assign('404page/404.html')</script>";
 					}
 					else
 					{
@@ -48,8 +48,8 @@
 				if(!$resultado)
 				{
 						
-					echo"
-						alert('Não foi possível ligar á base de dados Ordem não executada');";
+					echo"<script>
+						alert('Não foi possível ligar á base de dados Ordem não executada');window.location.assign('404page/404.html')</script>";
 				}
 				else
 				{

@@ -6,7 +6,7 @@
 	
 	if(! isset($_POST["bRegister"]))
 	{
-		echo "<script> window.location.assign('index.php'); </script>";
+		echo "<script> window.location.assign('404page/404.html'); </script>";
 		exit();
 	}
 	
@@ -67,7 +67,7 @@
 		echo"
 			<script>
 			alert('Unable to Connect to the DB');
-			window.location.assign('index.php')
+			window.location.assign('404page/404.html')
 			</script>";	
 		exit();
 	}

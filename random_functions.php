@@ -12,7 +12,7 @@ function News(){
 	{
 					
 		echo"
-			alert('Não foi possível ligar á base de dados (Ordem não executada) 1');";
+			alert('Não foi possível ligar á base de dados (Ordem não executada) 1');window.location.assign('404page/404.html')";
 	}
 	else
 	{
@@ -36,7 +36,7 @@ function News(){
 		{
 					
 			echo"
-				alert('Não foi possível ligar á base de dados (Ordem não executada) 2');";
+				alert('Não foi possível ligar á base de dados (Ordem não executada) 2');window.location.assign('404page/404.html')";
 		}
 		else
 		{
@@ -68,7 +68,7 @@ function Total_Website_Views()
 	{
 					
 		echo"
-			alert('Não foi possível ligar á base de dados (Ordem não executada) ');";
+			alert('Não foi possível ligar á base de dados (Ordem não executada) ');window.location.assign('404page/404.html')";
 	}
 	else
 	{
@@ -100,7 +100,7 @@ function Total_Online_Users()
 	{
 					
 		echo"
-			alert('Não foi possível ligar á base de dados (Ordem não executada) ');";
+			alert('Não foi possível ligar á base de dados (Ordem não executada) ');window.location.assign('404page/404.html')";
 	}
 	else
 	{
@@ -132,7 +132,7 @@ function Total_Registered_Users()
 	{
 					
 		echo"
-			alert('Não foi possível ligar á base de dados (Ordem não executada) ');";
+			alert('Não foi possível ligar á base de dados (Ordem não executada) ');window.location.assign('404page/404.html')";
 	}
 	else
 	{

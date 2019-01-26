@@ -20,7 +20,7 @@
 			echo"
 				<script>
 				alert('Não foi possível validar a sessão');
-				window.location.assign('index.php')
+				window.location.assign('404page/404.html')
 				</script>";
 			exit();
 		}
@@ -42,7 +42,7 @@
 			echo"
 				<script>
 				alert('Não foi possível validar a sessão');
-				window.location.assign('index.php')
+				window.location.assign('404page/404.html')
 				</script>";
 			exit();
 		}
@@ -68,7 +68,7 @@
 				echo"
 				<script>
 				alert('Não foi possível validar a sessão');
-				window.location.assign('index.php')
+				window.location.assign('404page/404.html')
 				</script>";	
 				exit();
 			}
@@ -89,7 +89,7 @@
 					echo"
 						<script>
 						alert('Não foi possível validar a sessão');
-						window.location.assign('index.php')
+						window.location.assign('404page/404.html')
 						</script>";	
 						exit();
 				}
