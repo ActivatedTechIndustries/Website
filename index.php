@@ -83,7 +83,7 @@
 					<div class="hovereffect d-flex justify-content-center">
 					<h1 style="color:white;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible"><?php echo $Title ?></h1>
 					<div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:29.5vw;">
-						<p class="d-flex justify-content-center" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;"><?php echo $Content ?></p>
+						<p class="d-flex justify-content-center" style="color:white;position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;text-align: center;"><?php echo $Content ?></p>
 						<h2 style="width:100%;"><?php echo $Title ?></h2>
 					</div>
 					</div>
