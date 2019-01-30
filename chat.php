@@ -182,51 +182,14 @@ function openchatroom_tele() {
 				</div>
 				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
 				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
-				<div class="row">
-				<div class="col-md-12 Container_Friends_first" onclick="openchatroom();setTimeout(Show_Containers, 600);">
-					<p >Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
+				<?php
+					echo "
+					<div class='row'>
+					<div class='col-md-12 Container_Friends' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
+						<p >Amigo</p>
+					</div>
+					</div>";
+				?>
 				</div>
 		</div>
 		<!--Para telemovel-->		
@@ -247,51 +210,14 @@ function openchatroom_tele() {
 				</div>
 				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
 				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
-				<div class="row">
-				<div class="col-md-12 Container_Friends_first" onclick="openchatroom_tele()">
+				<?php
+				echo"
+				<div class='row'>
+				<div class='col-md-12 Container_Friends' onclick='openchatroom_tele()'>
 					<p >Amigo</p>
 				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
-				<div class="row">
-				<div class="col-md-12 Container_Friends">
-					<p>Amigo</p>
-				</div>
-				</div>
+				</div>";
+				?>
 				</div>
 		</div>
 		<!------------------------------------------------------------------>
@@ -314,46 +240,51 @@ function openchatroom_tele() {
 			</div>
 		</div>
 		</div>
-		<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
-			<div class="row" style="height:75vh">
-				<div class="col-md-12" style="background:darkgray;">
+		<?php
+		echo "
+		<div id='conversation'  class='container-fluid d-none d-md-block' style='margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left' >
+			<div class='row' style='height:75vh'>
+				<div class='col-md-12' style='background:darkgray;'>
 					<br>
-					<div id="container_head"class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;visibility:hidden">
-					<div class="row">
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="Imagens/user_icon.png">
+					<div id='container_head'class='container-fluid' style='overflow: hidden;padding:10px 0px 0px;visibility:hidden'>
+					<div class='row'>
+					<div class='col-md-1'>
+					<img style='max-height:40px;' src='Imagens/user_icon.png'>
 					</div>
-					<div class="col-md-10">
-					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
+					<div class='col-md-10'>
+					<p style='border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);'> Hey</p>
 					</div>
 					</div>
 					</div>
 					<br>
-					<div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
-					<div class="row">
-					<div class="col-md-10" align="right">
-					<p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
+					<div id='container_body' class='container-fluid' style='padding:10px 0px 0px; visibility:hidden'>
+					<div class='row'>
+					<div class='col-md-10' align='right'>
+					<p style='margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);'> Helllo</p>
 					</div>
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="Imagens/user_icon.png">
+					<div class='col-md-1'>
+					<img style='max-height:40px;' src='Imagens/user_icon.png'>
 					</div>
 					</div>
 					</div>
 				</div>
 				</div>	
-				<div class="row" style="height:10vh;">
-				<div id="container_footer" class="col-md-12" style="background:darkgray; border-radius: 15px;visibility:hidden">
-					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
-					<div class="row">
-					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">				
+				<div class='row' style='height:10vh;'>
+				<div id='container_footer' class='col-md-12' style='background:darkgray; border-radius: 15px;visibility:hidden'>
+					<div class='container-fluid align-items-end' style='padding:10px 0px 0px; position:relative; bottom:0px'>
+					<div class='row'>
+					<div class='col-md-12' align='right'>
+					<input style='border-radius:20px 20px 20px 20px; width:70%;' placeholder='Insira a mensagem' type='text'>				
 					</div>
 					</div>
 					</div>
 				</div>
 				</div>				
-		</div>
+		</div>";
+		?>
 		<!--Para telemovel-->
+		<?php
+		echo '
 			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:86vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
 			<div class="row" style="height:75vh">
 				<div class="col-md-12" style="background:darkgray;">
@@ -393,7 +324,8 @@ function openchatroom_tele() {
 					</div>
 				</div>
 				</div>				
-		</div>
+		</div>';
+		?>
 		<!------------------------------------------------------------------>
 		  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

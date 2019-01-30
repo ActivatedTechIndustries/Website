@@ -78,9 +78,10 @@
     <span class="sr-only" >Next</span>
   </a>
 </div>
+<!----------------------------------------------------------- News Container --------------------------------------------------------->
 			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
 					<div class="hovereffect d-flex justify-content-center">
-					<h1 style="color:white;"><?php echo $Title ?></h1>
+					<h1 style="color:white;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible"><?php echo $Title ?></h1>
 					<div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:29.5vw;">
 						<p class="d-flex justify-content-center" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;"><?php echo $Content ?></p>
 						<h2 style="width:100%;"><?php echo $Title ?></h2>
@@ -99,6 +100,7 @@
 					</div>
 			</div>
 			<!--Fim de telemovel-->
+<!------------------------------------------------------------------------------------------------------------------------------------>
 	</div>
 	</div>
 	

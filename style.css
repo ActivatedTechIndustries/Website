@@ -90,6 +90,10 @@
 			transition:all .4s ease-in-out;
 		}
 
+		.hovereffect h1{
+			visibility: hidden;
+		}
+
 		.hovereffect img {
 			display:block;
 			position:relative;
