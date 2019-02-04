@@ -188,9 +188,9 @@ function openchatroom_tele() {
 				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
 				<?php
                     echo "
-                    <div class='row'>
+                    <div class='row' >
                     <div class='col-md-12 Container_Friends' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
-                        <p >Amigo</p>
+                        <p style=' -webkit-user-select: none;'>Amigo</p>
                     </div>
                     </div>";
                 ?>
