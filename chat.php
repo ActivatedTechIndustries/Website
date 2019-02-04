@@ -190,7 +190,8 @@ function openchatroom_tele() {
                     echo "
                     <div class='row' >
                     <div class='col-md-12 Container_Friends' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
-                        <p style=' -webkit-user-select: none;'>Amigo</p>
+                       <p style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
+
                     </div>
                     </div>";
                 ?>
@@ -218,7 +219,7 @@ function openchatroom_tele() {
 				echo"
 				<div class='row'>
 				<div class='col-md-12 Container_Friends' onclick='openchatroom_tele()'>
-					<p >Amigo</p>
+					<p style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
 				</div>
 				</div>";
 				?>
