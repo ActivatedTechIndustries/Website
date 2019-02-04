@@ -80,25 +80,31 @@
 </div>
 <!----------------------------------------------------------- News Container --------------------------------------------------------->
 			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
-					<div class="hovereffect d-flex justify-content-center">
-					<h1 style="color:white;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;"><?php echo $Title ?></h1>
-					<div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:29.5vw;">
-						<p class="d-flex justify-content-center" style="color:white;position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;text-align: center;"><?php echo $Content ?></p>
-						<h2 style="width:100%;"><?php echo $Title ?></h2>
-					</div>
-					</div>
-			</div>
-			<!--Para telemovel-->
-			<div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
-					<div class="hovereffect">
-					<h1 id="Title" align="center" style="color:white;margin-top: 5%;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;"><?php echo $Title ?></h1>
-					<div class="overlay " style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
-						<p class="fluid" style="color:white;background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;text-align: center;"><?php echo $Content ?></p>
-						<h2 style="margin-bottom:2%;"><?php echo $Title ?></h2>
-						<br>
-					</div>
-					</div>
-			</div>
+                    <div class="hovereffect d-flex justify-content-center">
+                    <h1  style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left"><?php echo $Title ?></h1>
+                    <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
+                    <div class="container-fluid" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-center" style=""><?php echo $Content ?></p>
+                            </div>
+                        </div>
+                    </div>
+                        <h2  style="width:100%;"><p  class="text-center" style="width:90%"><?php echo $Title ?></p></h2>
+                    </div>
+                    </div>
+            </div>
+            <!--Para telemovel-->
+            <div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;">
+                    <div class="hovereffect">
+                    <h1 id="Title" align="center" style="color:white;background-color: #333;"><?php echo $Title ?></h1>
+                    <div class="overlay" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
+                        <p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">?php echo $Content ?></p>
+                        <h2 style="margin-bottom:2%;"><?php echo $Title ?></h2>
+                        <br>
+                    </div>
+                    </div>
+            </div>
 			<!--Fim de telemovel-->
 <!------------------------------------------------------------------------------------------------------------------------------------>
 	</div>
@@ -146,7 +152,7 @@
 			<div class="container-fluid" id="container_news" style="overflow:hidden;">
 				  <div class="row justify-content-center align-items-center">
 							
-							<div class="col-md-4 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo  h-50 text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:60vh;height: 60vh;overflow: auto;overflow-x: hidden;">
 							
 									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
 									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -169,7 +175,7 @@
 									
 							</div>	
 							<br>
-							<div class="col-md-4 col-lg-4 col-xl-4 col-sm-4 h-50 Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:60vh;height: 60vh">
 
                                     <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
                                     <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -194,49 +200,20 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-bottom: 5vh;">
 		<!-- ///////////////////////////////////// Row 1  /////////////////////////////////////-->
 			<div class="row justify-content-center align-items-center">
-				<div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel" style="width:100%;background-color:#333;height:30vh;max-height:30vh;border-right-color:transparent;">
-				  <div  class="carousel-inner">
-					<div class="carousel-item active " >
-						<br>
-						<div class="container-fluid">
-							<div class="row">
-							<div class="col-md-2">
-									</div>
-									<div class="col-md-4">
-										<img class="d-block" style="height:15vh;"  src="Imagens/logo_white.png">
-										<h4 class="text-center" style="color: white;">Activated Tech Industries</h4>
-									</div>
-									<div class="col-md-4">
-										<img class="d-block"  style="height:15vh;" src="Imagens/Warden_Logo.png">
-										<h4 class="text-center" style="color: white;" >Warden</h4>
-									</div>
-									<div class="col-md-2">
-									</div>
-							</div>
-						</div>
-					  
-					  
-					</div>
-				  </div>
-				</div>
-				<!--Para telemovel-->
-					<div id="carouselExampleIndicators" class="carousel slide d-sm-none" data-ride="carousel" style="width:100%;background-color:#333;height:30vh;border-right-color:transparent;">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:0.25%;width:100%;background-color:#333;height:30vh;border-right-color:transparent;">
 				  <ol class="carousel-indicators" id="Carousel_Indexs">  <!-- Carousel ID !!!!! -->
 					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 				  </ol>
-				  <div  class="carousel-inner">
-					<div class="carousel-item active " >
-						<br>
-					  <img class="d-block" style="height:12vh;max-width:30%;"  src="Imagens/logo_white.png" alt="First slide">
-					  <h4 class="text-center" style="color: white;">Activated Tech Industries</h4>
-					  <br>
+				  <div  class="carousel-inner ">
+					<div class="carousel-item active" >
+					  <img class="d-block "  style="max-height:15vh;max-width:60%; margin-bottom: 2%;"  src="Imagens/logo_white.png" alt="First slide">
+					  <h3 class="text-center" style="margin-bottom:2%;color:white;" alt="First slide">Activeted Tech Industries</h2>
+					  <br><br>
 					</div>
 					<div class="carousel-item" >
-						<br>
-					  <img class="d-block"  style="height:12vh;max-width:30%;"  src="Imagens/Warden_Logo.png" alt="Second slide">
-					  <h4 class="text-center" style="color: white;">Warden</h4>
-						<br>
+						<img class="d-block "  style="max-height:15vh;max-width:60%; margin-bottom: 2%;"  src="Imagens/Warden_Logo.png" alt="Second slide">
+					  <h3 class="text-center" style="margin-bottom:2%;color:white;">Warden</h2>
 					</div>
 				  </div>
 				</div>
@@ -247,68 +224,36 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-top: 5vh; margin-bottom: 5vh;">
 		
 		<!-- ///////////////////////////////////// Row 2  /////////////////////////////////////-->
-		<div class="container-fluid">
+					<!--Visivel para telemovel-->
+			<div class="container-fluid d-md-none" style="height: 30vh;overflow:auto;">
 			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-4">                 
-				
-					<ul style="color: #50c1e5;">
+				<div class="col-sm-6 text-right" style="max-width: 50%">                 
 					<h4 style="color: #50c1e5;">About</h4>
-						<ul >
-							<li >
-							<a href="">FAQ</a>
-							</li>
-								<li >
+							<a  href="">FAQ</a>
+							<br>
 								<a href="">Terms of Use</a>
-								</li>
-							<li >
+								<br>
 							<a href="">Privacy Policy</a>
-							</li>
-								<li >
+							<br>
 								<a href="">Blog</a>
-								</li>
-							<li >
+								<br>
 							<a href="">Giveaway</a>
-							</li>
-						</ul>
-					
-					
-					</ul>
-				
-				
 				</div> 
-				
-				<div class="col-md-4">                 
-				
-					<ul style="color: #50c1e5;">
+				<div class="col-sm-6" style="max-width: 50%">                 
 					<h4 style="color: #50c1e5;">Contacts</h4>
-						<ul >
-							<li >
 							<a href="">Facebook</a>
-							</li>
-								<li >
+							<br>
 								<a href="">Tweeter</a>
-								</li>
-							<li >
+								<br>
 							<a href="">Instagram</a>
-							</li>
-								<li >
+							<br>
 								<a href="">Gmail</a>
-								</li>
-							<li >
+								<br>
 							<a href="">Tele: +351 111 222 22</a>
-							</li>
-						</ul>
-					
-					
-					</ul>
-				
-				
 				</div> 
-				<div class="col-md-2"></div>
 				</div>
 			</div>
-			
+			</div>
 			<!-- ///////////////////////////////////// Row 2 End /////////////////////////////////////-->
 	     </div>
 		 
