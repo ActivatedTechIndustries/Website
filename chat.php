@@ -148,7 +148,9 @@ function openchatroom_tele() {
 
 						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-home " href="index.php"></i> Home</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button" href="navbar_logged_in.php"><i class="fa fa-wrench"></i> Support</a>			
+                        <a class="dropdown-item hover_menu_button" href="navbar_logged_in.php"><i class="fa fa-wrench"></i> Support</a>		
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>						
                     </div>
                 </li>
 				<!-- Visible Only On Phone -->	
@@ -160,6 +162,8 @@ function openchatroom_tele() {
 						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-sign-in " href="index.php"></i> Home</a>
 						 <div class="dropdown-divider"></div>
                         <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-wrench"></i> Support</a>				
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>
                     </div>
                 </li>
 				<!-- Visible Only On Phone end -->
