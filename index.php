@@ -81,7 +81,7 @@
 <!----------------------------------------------------------- News Container --------------------------------------------------------->
 			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
                     <div class="hovereffect d-flex justify-content-center">
-                    <h1  style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left"><?php echo $Title ?></h1>
+                    <h1  style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;text-align: center"><?php echo $Title ?></h1>
                     <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
                     <div class="container-fluid" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">
                         <div class="row">
@@ -95,11 +95,11 @@
                     </div>
             </div>
             <!--Para telemovel-->
-            <div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;">
+            <div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
                     <div class="hovereffect">
-                    <h1 id="Title" align="center" style="color:white;background-color: #333;"><?php echo $Title ?></h1>
+                    <h1 id="Title" align="center" style="color:white;background-color: #333;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;"><?php echo $Title ?></h1>
                     <div class="overlay" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
-                        <p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">?php echo $Content ?></p>
+                        <p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;">?php echo $Content ?></p>
                         <h2 style="margin-bottom:2%;"><?php echo $Title ?></h2>
                         <br>
                     </div>

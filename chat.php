@@ -241,8 +241,7 @@ function openchatroom_tele() {
 		</div>
 		</div>
 		<?php
-		echo "
-<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
+		echo '<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
             <div class="row" style="height:75vh">
                 <div class="col-md-12" style="background:darkgray;">
                     <br>
@@ -269,7 +268,7 @@ function openchatroom_tele() {
                     </div>
                 </div>
                 </div>    
-		</div>";
+		</div>';
         ?>
                 <div class="row" style="height:10vh;">
                 <div id="container_footer" class="col-md-12" style="background:darkgray; border-radius: 15px;visibility:hidden">
