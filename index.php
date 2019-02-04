@@ -224,7 +224,37 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-top: 5vh; margin-bottom: 5vh;">
 		
 		<!-- ///////////////////////////////////// Row 2  /////////////////////////////////////-->
-					<!--Visivel para telemovel-->
+		<div class="container-fluid d-none d-md-block" style="height: 25vh">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-4 text-right">                 
+					<h4 style="color: #50c1e5;">About</h4>
+							<a href="">FAQ</a>
+							<br>
+								<a href="">Terms of Use</a>
+								<br>
+							<a href="">Privacy Policy</a>
+							<br>
+								<a href="">Blog</a>
+								<br>
+							<a href="">Giveaway</a>
+				</div> 
+				<div class="col-md-4 ">                 
+					<h4 style="color: #50c1e5;">Contacts</h4>
+							<a href="">Facebook</a>
+							<br>
+								<a href="">Tweeter</a>
+								<br>
+							<a href="">Instagram</a>
+							<br>
+								<a href="">Gmail</a>
+								<br>
+							<a href="">Tele: +351 111 222 22</a>
+				</div> 
+				<div class="col-md-2"></div>
+				</div>
+			</div>
+			<!--Visivel para telemovel-->
 			<div class="container-fluid d-md-none" style="height: 30vh;overflow:auto;">
 			<div class="row">
 				<div class="col-sm-6 text-right" style="max-width: 50%">                 
