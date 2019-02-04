@@ -242,89 +242,92 @@ function openchatroom_tele() {
 		</div>
 		<?php
 		echo "
-		<div id='conversation'  class='container-fluid d-none d-md-block' style='margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left' >
-			<div class='row' style='height:75vh'>
-				<div class='col-md-12' style='background:darkgray;'>
-					<br>
-					<div id='container_head'class='container-fluid' style='overflow: hidden;padding:10px 0px 0px;visibility:hidden'>
-					<div class='row'>
-					<div class='col-md-1'>
-					<img style='max-height:40px;' src='Imagens/user_icon.png'>
-					</div>
-					<div class='col-md-10'>
-					<p style='border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);'> Hey</p>
-					</div>
-					</div>
-					</div>
-					<br>
-					<div id='container_body' class='container-fluid' style='padding:10px 0px 0px; visibility:hidden'>
-					<div class='row'>
-					<div class='col-md-10' align='right'>
-					<p style='margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);'> Helllo</p>
-					</div>
-					<div class='col-md-1'>
-					<img style='max-height:40px;' src='Imagens/user_icon.png'>
-					</div>
-					</div>
-					</div>
-				</div>
-				</div>	
-				<div class='row' style='height:10vh;'>
-				<div id='container_footer' class='col-md-12' style='background:darkgray; border-radius: 15px;visibility:hidden'>
-					<div class='container-fluid align-items-end' style='padding:10px 0px 0px; position:relative; bottom:0px'>
-					<div class='row'>
-					<div class='col-md-12' align='right'>
-					<input style='border-radius:20px 20px 20px 20px; width:70%;' placeholder='Insira a mensagem' type='text'>				
-					</div>
-					</div>
-					</div>
-				</div>
-				</div>				
+<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
+            <div class="row" style="height:75vh">
+                <div class="col-md-12" style="background:darkgray;">
+                    <br>
+                    <div id="container_head"class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;visibility:hidden">
+                    <div class="row">
+                    <div class="col-md-1">
+                    <img style="max-height:40px;" src="Imagens/user_icon.png">
+                    </div>
+                    <div class="col-md-10">
+                    <p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
+                    </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
+                    <div class="row">
+                    <div class="col-md-10" align="right">
+                    <p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
+                    </div>
+                    <div class="col-md-1">
+                    <img style="max-height:40px;" src="Imagens/user_icon.png">
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>    
 		</div>";
-		?>
+        ?>
+                <div class="row" style="height:10vh;">
+                <div id="container_footer" class="col-md-12" style="background:darkgray; border-radius: 15px;visibility:hidden">
+                    <div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
+                    <div class="row">
+                    <div class="col-md-12" align="right">
+                    <input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">               
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>                
+        </div>
 		<!--Para telemovel-->
 		<?php
 		echo '
-			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:86vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
-			<div class="row" style="height:75vh">
-				<div class="col-md-12" style="background:darkgray;">
-					<br>
-					<div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
-					<div class="row">
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="Imagens/user_icon.png">
-				
-					</div>
-					<div class="col-md-11">
-					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
-					</div>
-					</div>
-					</div>
-					<br>
-					<div class="container-fluid" style=" padding:10px 0px 0px; ">
-					<div class="row">
-					<div class="col-md-10" align="right">
-					<p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
-					</div>
-					<div class="col-md-1">
-					<img style="max-height:40px;" src="Imagens/user_icon.png">
-					</div>
-					</div>
-					</div>
-				</div>
-				</div>	
-				<div class="row" style="height:10vh;">
-				<div class="col-md-12" style="background:darkgray; border-radius: 15px;">
-					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
-					<div class="row">
-					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">				
-					</div>
-					</div>
-					</div>
-				</div>
-				</div>				
-		</div>';
+			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:85vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
+            <div class="row" style="height:75vh">
+                <div class="col-md-12" style="background:darkgray;overflow:auto;">
+                    <br>
+                    <div class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;">
+                    <div class="row" >
+                    <div class="col-md-12" >
+                    <img align="left" style="max-height:40px;margin-right:2.5%;max-width:20%" src="Imagens/user_icon.png">      
+ 
+ 
+ 
+                    <p  style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" > Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey </p>
+                    </div>
+                    </div>
+                    </div>
+ 
+                    <div class="container-fluid" style=" padding:10px 0px 0px; overflow: hidden;">
+                    <div class="row">
+ 
+ 
+ 
+                    <div class="col-md-12" >
+                    <img align="right" style="max-height:40px;margin-right:2.5%" src="Imagens/user_icon.png">       
+                    <p  style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" align="right"> Ola tudo bem eu chamo-me tozé</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row" style="height:10vh;">
+                <div class="col-md-12" style="background:darkgray; border-radius: 15px;">
+                    <div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
+                    <div class="row">
+                    <div class="col-md-12" align="right">
+                    <input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">             
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>                    
+        </div>';
 		?>
 		<!------------------------------------------------------------------>
 		  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
