@@ -93,7 +93,10 @@ $(document).ready(function(){
                         <div class="dropdown-divider"></div>
 						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>			
+                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>	
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>
+					
                     </div>
                 </li>
 				<!-- Visible Only On Phone -->	
@@ -108,7 +111,9 @@ $(document).ready(function(){
                         <div class="dropdown-divider"></div>
 						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="index.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i>Support</a>			
+                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i>Support</a>	
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>						
                     </div>
                 </li>
 				<!-- Visible Only On Phone end -->
@@ -129,7 +134,7 @@ $(document).ready(function(){
 
 <div class="Overlay" id="Login_Overlay" >
 		  <div class="d-flex justify-content-center" >
-			  <div align="center" class="lr-div_login d-none d-lg-block" style="margin:auto; margin-top:10%;">		  
+			  <div align="center" class="lr-div_login d-none d-lg-block" style="margin:auto; margin-top:15%;">		  
 			  <form class="align-content-center" action="/action_page.php" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 			   <br>
@@ -158,7 +163,7 @@ $(document).ready(function(){
 				</form>
 			  </div>	
 				<!--para telemovel-->
-				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:10%;">
+				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:19%;">
 				<form  class="align-content-center" action="/action_page.php" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 					 <div class="rainbowWrap" style="border-radius:20px 20px 0px 0px;">
@@ -184,19 +189,16 @@ $(document).ready(function(){
 					<button type="button" class="btn btn-outline-primary d-lg-none" onclick="LoginOff()" style="position:relative;"> Exit Overlay </button>
 					<br><br>
 			</form>
-			 
-					
-				
 			  </div>			  
 		</div>	 
 	</div>
 	<!--acaba aqui login-->
 	<!--Começa o register-->
-	<div class="Overlay" id="Register_Overlay">
+		<div class="Overlay" id="Register_Overlay">
 		  
-		  <div class="d-flex justify-content-center" style="padding: 2% 0;">
+		  <div class="d-flex justify-content-center">
 		  
-			  <div  align="center" class="lr-div_register d-none d-lg-block" >
+			  <div  align="center" class="lr-div_register d-none d-lg-block" style="margin-top:10%" >
 			  
 			  <form  class="align-content-center " action="/action_page.php" style="margin-top:10vh;">
 			  <div class="Title font_text"><p>Register</p></div>
@@ -235,17 +237,8 @@ $(document).ready(function(){
 							<input class="rainbow"  placeholder="Confirm Password" type="password" id="Conf_pwd"/>
 					
 					</div>
-					<div class="rainbowWrap" style="border-radius:0px 0px  20px 20px;">
-							<div class="rainbowBg" style="border-radius:0px 0px  20px 20px;">
-							<div class="rainbowSd rainbowSd_1" style="border-radius:0px 0px  20px 20px;">
-								</div>
-								</div>
-							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Country" type="text" id="Contry"/>
-					</div>
-					<div class="country_back">
-					<select id="selectNumber" style="background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);width: 18.5vw;padding: 5px;height:36px;outline:none;border-radius:50px;display: block;" name="Test">
-								
-								<option>Choose a number</option>
+					<select id="selectNumber" OnmouseOver="Country_Opacity()" OnmouseOut="Country_Opacity_Out()" style="opacity:0.5;width:38.9vh;margin-left:1%;height:26px;outline:none;border-radius:0px 0px  20px 20px;background-color:#333;color:white;" name="Test">
+								<option>Choose a Country</option>
 								<script>
 									var myArray = new Array("Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo, the Democratic Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "France Metropolitan", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard and Mc Donald Islands", "Holy See (Vatican City State)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, Democratic People's Republic of", "Korea, Republic of", "Kuwait", "Kyrgyzstan", "Lao, People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia, The Former Yugoslav Republic of", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Federated States of", "Moldova, Republic of", "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia (Slovak Republic)", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "St. Helena", "St. Pierre and Miquelon", "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan, Province of China", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe");
 					
@@ -254,16 +247,15 @@ $(document).ready(function(){
 									}
 								</script>
 					</select>
-					</div>
 					  <br><br>
-					  <button type="submit" class="btn btn-outline-primary2">Submit</button>
+					  <button type="submit" class="btn btn-outline-primary2" style="margin-bottom:2%;">Submit</button>
+					  <br>
+					<button type="button" class="btn btn-outline-primary" style="margin-right:1%;" onclick="RegisterOff()"> Exit Overlay </button>
 				</form>
-				<br>
-				<button type="button" class="btn btn-outline-primary" onclick="RegisterOff()"> Exit Overlay </button>
 				<br><br>
 				</div>	 
 				<!--para telemovel-->
-				<div  align="center" class="lr-div_register_tele d-lg-none" style="margin-top:-2%;">
+				<div  align="center" class="lr-div_register_tele d-sm-none " style="margin-top:-2%;height:80vh;margin-top:15%;">
 				
 				<form  class="align-content-center" action="/action_page.php" style="margin-top:10vh;">
 				  <div class="Title d-block  font_text"><p>Register</p></div>	
@@ -301,28 +293,25 @@ $(document).ready(function(){
 							<input class="rainbow"  placeholder="Confirm Password" type="password" id="Conf_pwd_tele"/>
 					
 					</div>
-					<div class="rainbowWrap" style="border-radius:0px 0px  20px 20px;">
-							<div class="rainbowBg" style="border-radius:0px 0px  20px 20px;">
-							<div class="rainbowSd rainbowSd_1" style="border-radius:0px 0px  20px 20px;">
-								</div>
-								</div>
-							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Country" type="text" id="Contry_tele"/>
-					</div>
-					  <br><br>
-					  <button type="submit" class="btn btn-outline-primary2">Submit</button>
-  
-			</form>
-			  <br>
-				<button type="button" class="btn btn-outline-primary" onclick="RegisterOff()"> Exit Overlay </button>
-				<br>
+						<select id="selectNumber_tele" OnmouseOver="Country_Opacity()" OnmouseOut="Country_Opacity_Out()" style="opacity:0.5;width:38.9vh;margin-left:3%;height:26px;outline:none;border-radius:0px 0px  20px 20px;background-color:#333;color:white;" name="Test">
+							<option>Choose a Country</option>
+								<script>
+									var myArray = new Array("Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo, the Democratic Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "France Metropolitan", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard and Mc Donald Islands", "Holy See (Vatican City State)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, Democratic People's Republic of", "Korea, Republic of", "Kuwait", "Kyrgyzstan", "Lao, People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia, The Former Yugoslav Republic of", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Federated States of", "Moldova, Republic of", "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia (Slovak Republic)", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "St. Helena", "St. Pierre and Miquelon", "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan, Province of China", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe");
 					
+									for(i=0; i<myArray.length; i++) {  
+									document.write('<option value="' + myArray[i] +'">' + myArray[i] + '</option>');
+									}
+								</script>
+					</select>
+					<br><br>
+					  <button type="submit" class="btn btn-outline-primary2" style="margin-bottom:5%;">Submit</button>
+					  <br>
+					<button type="button" class="btn btn-outline-primary" style="margin-right:1.5%;" onclick="RegisterOff()"> Exit Overlay </button>
+					</div>		   
+			</form>		
 			  </div>	
 		</div>	 			  
 	</div>
-	
-	
-	
-	
 <script>
 		function LoginOn() {
 			document.getElementById("Login_Overlay").style.display = "block";		
@@ -364,16 +353,17 @@ $(document).ready(function(){
 			document.getElementById("email_Register").value = "";
 			document.getElementById("pwd_Register").value = "";
 			document.getElementById("Conf_pwd").value = "";
-			document.getElementById("Contry").value = "";
+			document.getElementById("selectNumber").value = "Choose a Country";
+			document.getElementById("selectNumber_tele").value = "Choose a Country";
 			document.getElementById("user_tele").value = "";
 			document.getElementById("email_Register_tele").value = "";
 			document.getElementById("pwd_Register_tele").value = "";
 			document.getElementById("Conf_pwd_tele").value = "";
-			document.getElementById("Contry_tele").value = "";
 			document.getElementById("body1").style.position= "relative";
 			document.getElementById("nav1").hidden = false;
 			document.getElementById("fake_nav").hidden = true;
 			document.getElementById("body1").style.background="-webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%)";
+			
 			Blur_Off();
 			
 		}
@@ -396,24 +386,16 @@ $(document).ready(function(){
 			document.getElementById("footer").style.filter= "blur(0px)";
 			document.getElementById("container_2_Tele").style.filter= "blur(0px)";			
 		}
-	
-		$(document).keyup(function(e) {
-		     if (e.key === "Escape") { // escape key maps to keycode `27`
-
-						 if(document.getElementById("Login_Overlay").style.display == "block")
-						 {
-							LoginOff();
-							Blur_Off();
-						 }
-
-						 else if(document.getElementById("Register_Overlay").style.display == "block")
-						 {
-							RegisterOff();
-							Blur_Off();
-						 }
-
-
-					}
-				});
+		function Country_Opacity()
+		{
+			document.getElementById("selectNumber").style.opacity= "1";
+			document.getElementById("selectNumber_tele").style.opacity= "1";
+		}
+		function Country_Opacity_Out()
+		{
+			document.getElementById("selectNumber").style.opacity= "0.5";
+			document.getElementById("selectNumber_tele").style.opacity= "0.5";
+		}
 		
 		</script>
+
