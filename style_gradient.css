@@ -55,6 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 						transition: width 2s;
 						transition-timing-function: ease;
 				}
+				
 		.rainbow {
 						width: 36vh;
 						background:transparent;

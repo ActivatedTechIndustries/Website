@@ -32,7 +32,7 @@
 			min-height:20px;
 			display: inline-block;
 			width: 0px;
-			min-width: 40px; /*changed width to min-width */
+			min-width: 0px; /*changed width to min-width */
 			float: right;
 			-webkit-transition: 2s;
 			transition: 2s;

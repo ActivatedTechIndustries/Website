@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,39 +11,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="style.css" rel="stylesheet">
 	<link href="chat_style.css" rel="stylesheet">
-	<link href="scrollbar.css" rel="stylesheet">
+	<link  href="scrollbar.css" rel="stylesheet">
 	</head>
 <body>
 <script>
+
 function openLeftMenu() {
 	document.getElementById("leftMenu").style.display = "block";
 	document.getElementById("open").hidden = true;
 	document.getElementById("close").hidden = false;			
-	document.getElementById("container_open").style="width:20vw";
+	document.getElementById("container_open").style="width:19.5vw";
 }
-
 function closeLeftMenu() {
 	document.getElementById("container_open").style="width:40px";
 	document.getElementById("leftMenu").style.display = "none";
 	document.getElementById("close").hidden = true;
 	document.getElementById("open").hidden = false;
 }
-function Show_Text() {
+function Show() {
 	document.getElementById("Text_News").hidden = false;
+	document.getElementById("Image_chat").hidden = false;
 }
-function Hide_Text() {
+function Hide() {
 	document.getElementById("Text_News").hidden = true;
+	document.getElementById("Image_chat").hidden = true;
 }
 function openchatroom() {
-	
-	if (document.getElementById("conversation").style.visibility != "visible")
+	if (document.getElementById("conversation").style.visibility != "visible" )
 	{
 	document.getElementById("conversation").style.visibility = "visible";
 	document.getElementById("conversation").style.marginTop = "0vh";
 	document.getElementById("conversation").style.transition = "3s";
 	document.getElementById("conversation").style.height = "85vh";
 	document.getElementById("conversation").style.transition = "2s";
-	document.getElementById("conversation").style.width="50%";
+	document.getElementById("conversation").style.width="49%";
 
 	}
 	else
@@ -127,7 +127,7 @@ function openchatroom_tele() {
 	}
 </style>
 		
-<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;max-height:9vh;">
+	<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;max-height:9vh;">
            
 		   <!-- Brand/logo -->
             <a class="navbar-brand " href="index.php" style="color: white">
@@ -145,7 +145,6 @@ function openchatroom_tele() {
                     <a class="nav-link dropdown-toggle hover_button" href="chat.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Menu
                     </a>
                     <div class="dropdown-menu dropdown-menu-right " style="text-align: center; overflow:auto;" aria-labelledby="navbarDropdown">
-
 						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-home " href="index.php"></i> Home</a>
 						 <div class="dropdown-divider"></div>
                         <a class="dropdown-item hover_menu_button" href="navbar_logged_in.php"><i class="fa fa-wrench"></i> Support</a>		
@@ -179,8 +178,10 @@ function openchatroom_tele() {
 				</div>
 				<hr style="background:white; width:95%; border-width:1px;border-radius:50px">
 				<div class="row">
-				<div class="col-md-12" style="overflow:auto;height:3.5vh;">
-				<p> Dados da pessoa facebook, twitter, mail etc</p>
+				<div class="col-md-12" style="overflow:hidden;height:3.5vh;"> <!-- Not Auto Sizing -->
+				<p href="www.facebook.com"> Facebook: www.facebook.com/User </p>
+				<!-- <p href="www.twitter.com"> Twitter: www.twitter.com/User </p>
+				<p href="www.instagram.com"> Instagram: www.instagram.com/User </p> -->
 				</div>
 				</div>
 				</div>
@@ -189,9 +190,8 @@ function openchatroom_tele() {
 				<?php
                     echo "
                     <div class='row' >
-                    <div class='col-md-12 Container_Friends' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
-                       <p style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
-
+                    <div class='col-md-12 Container_Friends text-center' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
+                       <p  style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
                     </div>
                     </div>";
                 ?>
@@ -208,7 +208,7 @@ function openchatroom_tele() {
 				</div>
 				<hr style="background:white; width:95%; border-width:1px;border-radius:50px">
 				<div class="row">
-				<div class="col-md-12" style="overflow:auto;height:3.5vh;">
+				<div class="col-md-12" style="overflow:hidden;height:3.5vh;">
 				<p> Dados da pessoa facebook, twitter, mail etc</p>
 				</div>
 				</div>
@@ -219,35 +219,65 @@ function openchatroom_tele() {
 				echo"
 				<div class='row'>
 				<div class='col-md-12 Container_Friends' onclick='openchatroom_tele()'>
-					<p style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
+					<p class='d-flex justify-content-center' style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
 				</div>
 				</div>";
 				?>
 				</div>
 		</div>
 		<!------------------------------------------------------------------>
-		<div class="container-fluid d-none d-md-block" style="max-width:25%;max-height:90vh;float:right;">
-		<div class="container-fluid" style="max-width:2vw;float:right;">
+		<?php
+		echo '
+		<div class="container-fluid d-none d-md-block" style="max-width:26%;max-height:90vh;float:right;">
+		<div class="container-fluid" style="max-width:2vw;float:right;margin-right:1%">
 		<div class="row">
 		<div class="col-md-12">
-		<button id="open" class="btn btn-outline-open" style="font-size:30px;" onclick="openLeftMenu(); setTimeout(Show_Text, 1500);"><p style="margin-left:-0.6vw">+<p></button>
-		<button id="close" class="btn btn-outline-close" style="font-size:18px;" onclick="closeLeftMenu();Hide_Text()" hidden><p style="margin-left:-0.25vw">X<p></button>		
+		<button id="open" class="btn btn-outline-open" style="font-size:30px;" onclick="openLeftMenu(); setTimeout(Show, 1500);"><p class="d-flex justify-content-center">+<p></button>
+		<button id="close" class="btn btn-outline-close" style="font-size:18px;" onclick="closeLeftMenu();Hide()" hidden><p class="d-flex justify-content-center">X<p></button>		
 		</div>
 		</div>
 		</div>
 		<div class="w3-sidebar w3-bar-block w3-card w3-animate-left " style="display: none; float: right;" id="leftMenu">
-			<div class="container Open_left" id="container_open" style="width: 40px;">
-			<div class="row">
+			<div class="container Open_left" id="container_open"  >
+			<div class="row" id="Text_News" hidden>
+			<div class="col-md-12 text-center" style="height:30%;margin-top:2%;">
+			<p> Imagens</p>
+			</div>
+			</div>
+			<div class="row text-center"style="max-height:90%;overflow:auto;" id="Image_chat" hidden >
 			<div class="col-md-12">
-			<p id="Text_News" hidden> NEWS</p>
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:92%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:92%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:92%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			</div>
+			<div class="col-md-12">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
+			<img  style="height:100px;max-width:45%;margin-bottom:2%;" src="Imagens/new_york.jpg">
 			</div>
 			</div>
 			</div>
 		</div>
-		</div>
+		</div>';
+		?>
 		<?php
 		echo '
-		<div id="conversation"  class="container-fluid d-none d-md-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:75%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
+		<div id="conversation"  class="container-fluid d-none d-lg-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:58%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
 			<div class="row" style="height:75vh">
 				<div class="col-md-12" style="background:darkgray;">
 					<br>
@@ -257,7 +287,7 @@ function openchatroom_tele() {
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
 					</div>
 					<div class="col-md-10">
-					<p style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hey</p>
+					<p style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:100%;" > Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
 					</div>
 					</div>
 					</div>
@@ -265,7 +295,7 @@ function openchatroom_tele() {
 					<div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
 					<div class="row">
 					<div class="col-md-10" align="right">
-					<p style="margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
+					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);">Hello you are very Vasco</p>
 					</div>
 					<div class="col-md-1">
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
@@ -280,7 +310,7 @@ function openchatroom_tele() {
 					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
 					<div class="row">
 					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">				
+					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">				
 					</div>
 					</div>
 					</div>
@@ -298,7 +328,7 @@ function openchatroom_tele() {
 					<div class="row" >
 					<div class="col-md-12" >
 					<img align="left" style="max-height:40px;margin-right:2.5%;max-width:20%" src="Imagens/user_icon.png">		
-					<p  style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" > Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey </p>
+					<p  style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" > Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey Hey heeeyeyyyyyyyyyyyyyyyyyyyyyyyy </p>
 					</div>
 					</div>
 					</div>
@@ -306,26 +336,26 @@ function openchatroom_tele() {
 					<div class="row">
 					<div class="col-md-12" >
 					<img align="right" style="max-height:40px;margin-right:2.5%" src="Imagens/user_icon.png">		
-					<p  style="border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" align="right"> Ola tudo bem eu chamo-me tozé</p>
+					<p  style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:70%;margin-top:3%" align="right"> Ola tudo bem eu chamo-me tozé</p>
 					</div>
 					</div>
 					</div>
 				</div>
-			</div>
+			</div>';
+			?>
 				<div class="row" style="height:10vh;">
 				<div class="col-md-12" style="background:darkgray; border-radius: 15px;">
 					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
 					<div class="row">
 					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">				
+					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">				
 					</div>
 					</div>
 					</div>
 				</div>
 				</div>
 			</div>					
-		</div>';
-		?>
+		</div>
 		<!------------------------------------------------------------------>
 		  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -34,6 +34,15 @@
 		News(); // News Randomizer Function
 		Counters();
 	}
+	function Show_Title()
+	{
+			document.getElementById("Title").hidden= false;
+	}
+	function Hide_Title()
+	{
+			document.getElementById("Title").hidden= true;
+	}
+	
 	</script>
 	
 </head>
@@ -79,10 +88,10 @@
   </a>
 </div>
 <!----------------------------------------------------------- News Container --------------------------------------------------------->
-			<div id="container1" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
+			<div id="container1" OnmouseOver="Hide_Title()" OnmouseOut="Show_Title()" class="col d-none d-md-block" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;">
                     <div class="hovereffect d-flex justify-content-center">
-                    <h1  style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;text-align: center"><?php echo $Title ?></h1>
-                    <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
+                    <h1 id="Title" class="d-flex align-items-center" style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;text-align: center"><?php echo $Title ?></h1>
+                    <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:60vh;height:60vh;width:100%;">
                     <div class="container-fluid" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">
                         <div class="row">
                             <div class="col-md-12">
@@ -95,13 +104,19 @@
                     </div>
             </div>
             <!--Para telemovel-->
-            <div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;border:3px;border-style:solid;border-left-color: darkgray;border-right-color: #333;border-top-color: #333;border-bottom-color: #333;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;background-size: 100% 100%;">
+            <div id="container1" class="col d-sm-none" style="margin-top:0.25%;width:30%;background-color:#333;height:60vh;background-image: url(<?php echo $Image ?>);background-repeat: no-repeat;">
                     <div class="hovereffect">
-                    <h1 id="Title" align="center" style="color:white;background-color: #333;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;"><?php echo $Title ?></h1>
-                    <div class="overlay" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
-                        <p class="fluid" style="background-color:gray; height:50%;margin-top:5%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;visibility:visible;text-align: center;">?php echo $Content ?></p>
-                        <h2 style="margin-bottom:2%;"><?php echo $Title ?></h2>
-                        <br>
+                      <h1 id="Title"  style=" color:white; max-width: 100%;max-height:60vh;height:60vh;overflow: hidden; text-align: left;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;text-align: center"><?php echo $Title ?></h1>
+                    <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:59.5vh;height:59.5vh;width:100%;">
+                         <div class="container-fluid" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-center" style=""><?php echo $Content ?></p>
+                            </div>
+                        </div>
+                    </div>
+                        <h2  style="width:100%;"><p  class="text-center" style="width:90%"><?php echo $Title ?></p></h2>
+                    </div>
                     </div>
                     </div>
             </div>
@@ -114,7 +129,7 @@
 	
 	
 	<!--////////////////////////////////////////////////////////////////////////////////////////////Horizontal Container ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-			<div id="container_2" class="container-fluid d-none d-lg-block" style="height:50vh; margin-top:4%;overflow:hidden">
+			<div id="container_2" class="container-fluid d-none d-sm-block" style="margin-top:4%;overflow:hidden">
 				<div class="row">
 					<div class="col-md-12" style="overflow:hidden">
 						<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -125,13 +140,13 @@
 							The medieval Vikings, who had contacts with the Byzantine empire through their expansion through eastern Europe, used the Old Norse name 'Miklagard' to describe the greatest city that they had ever encountered. These were the meeting grounds for a plethora of cultures and religions, anchoring ships of trade and war from far and wide, gathering all manifestation of interaction between the different collectives. Mikla,  has the same ambition.
 							</p>
 
-						<br><br>
 					<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; ">
 					
 					</div>
 				</div>
 			</div>
-			<div id="container_2_Tele" class="container-fluid d-block d-sm-none" style="height:77vh; margin-top:4%;overflow:hidden">
+			<!--Para telemovel-->
+			<div id="container_2_Tele" class="container-fluid d-sm-none" style=" margin-top:4%;overflow:hidden">
 				<div class="row">
 					<div class="col-md-12" style="overflow:hidden">
 						<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -141,10 +156,7 @@
 							<p class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:1vh">
 							The medieval Vikings, who had contacts with the Byzantine empire through their expansion through eastern Europe, used the Old Norse name 'Miklagard' to describe the greatest city that they had ever encountered. These were the meeting grounds for a plethora of cultures and religions, anchoring ships of trade and war from far and wide, gathering all manifestation of interaction between the different collectives. Mikla,  has the same ambition.
 							</p>
-
-						<br>
-					<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; margin-top:45%;">
-					
+					<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; margin-top:47%;">
 					</div>
 				</div>
 			</div>
@@ -152,7 +164,26 @@
 			<div class="container-fluid" id="container_news" style="overflow:hidden;">
 				  <div class="row justify-content-center align-items-center">
 							
-							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:60vh;height: 60vh;overflow: auto;overflow-x: hidden;">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:65vh;height: 65vh;overflow: hidden;overflow-x: hidden;">
+							
+									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
+									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center; margin-top: 17%;">Total Website Views</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Website_Views,0, ',', ' '); ?></h3>
+									<br>
+									
+									<hr style="background-color: white; width:15vw; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center;">    Online Users</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Online_Users,0, ',', ' '); ?></h3>
+									<br>
+									
+									<hr style="background-color: white; width:10vw; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center;">  Registered Users</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Registererd_Users,0, ',', ' '); ?></h3>
+									<br><br>
+							</div>
+							<!--para telemovel-->
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4  d-sm-none Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:70vh;height:70vh;overflow: hidden;overflow-x: hidden;">
 							
 									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
 									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -170,12 +201,11 @@
 									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Registererd_Users; ?></h3>
 									<br><br>
 							</div>
-
-							<div class="col-md-1 col-lg-1 col-xl-1 col-sm-1 Container_Conteudo " style="background-color:transparent;">
+							<div class="col-md-1 col-lg-1 col-xl-1 col-sm-1" style="background-color:transparent;">
 									
 							</div>	
 							<br>
-							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:60vh;height: 60vh">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:65vh;height:65vh">
 
                                     <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
                                     <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
@@ -189,8 +219,24 @@
 
                                     <br>
 
-                                    <p style="color:white; font-size: 0.7vw; text-align:right; margin-right: 5px;"> -'Information is only useful when it can be understood.'</p>
-                            </div>			
+                                    <p style="color:white; font-size: 10px; text-align:right; margin-right: 5%;"> -'Information is only useful when it can be understood.'</p>
+                            </div>	
+									<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-sm-none Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:70vh;height:70vh;">
+
+                                    <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
+                                    <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
+
+                                    <p style="color:white; font-weight: bold; text-align:center; margin-top: 17%;"> As company and as consumers ourselves,</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> we, at Activated Tech Industries, seek to</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> gather statistical information to test, </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> examine and share with the rest of our </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> fellow users, in order to achieve a better</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> standing in quality and customer service.</p>
+
+                                    <br>
+
+                                    <p style="color:white; font-size: 10px; text-align:right; margin-right: 5%;"> -'Information is only useful when it can be understood.'</p>
+                            </div>								
 			</div>
 		</div>
        <!-- Footer -->
@@ -200,10 +246,10 @@
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-bottom: 5vh;">
 		<!-- ///////////////////////////////////// Row 1  /////////////////////////////////////-->
 			<div class="row justify-content-center align-items-center">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:0.25%;width:100%;background-color:#333;height:30vh;border-right-color:transparent;">
+				<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="margin-top:0.25%;width:100%;background-color:#333;height:30vh;border-right-color:transparent;">
 				  <ol class="carousel-indicators" id="Carousel_Indexs">  <!-- Carousel ID !!!!! -->
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
 				  </ol>
 				  <div  class="carousel-inner ">
 					<div class="carousel-item active" >
@@ -241,7 +287,7 @@
 				</div> 
 				<div class="col-md-4 ">                 
 					<h4 style="color: #50c1e5;">Contacts</h4>
-							<a href="">Facebook</a>
+							<a href="https://www.facebook.com/" >Facebook</a>
 							<br>
 								<a href="">Tweeter</a>
 								<br>
@@ -259,27 +305,27 @@
 			<div class="row">
 				<div class="col-sm-6 text-right" style="max-width: 50%">                 
 					<h4 style="color: #50c1e5;">About</h4>
-							<a  href="">FAQ</a>
+							<a  href="#">FAQ</a>
 							<br>
-								<a href="">Terms of Use</a>
+								<a href="#">Terms of Use</a>
 								<br>
-							<a href="">Privacy Policy</a>
+							<a href="#">Privacy Policy</a>
 							<br>
-								<a href="">Blog</a>
+								<a href="#">Blog</a>
 								<br>
-							<a href="">Giveaway</a>
+							<a href="#">Giveaway</a>
 				</div> 
-				<div class="col-sm-6" style="max-width: 50%">                 
+				<div class="col-sm-6" style="max-width: 50%;">                 
 					<h4 style="color: #50c1e5;">Contacts</h4>
-							<a href="">Facebook</a>
+							<a href="www.facebook.com">Facebook</a>
 							<br>
-								<a href="">Tweeter</a>
+								<a href="#">Tweeter</a>
 								<br>
-							<a href="">Instagram</a>
+							<a href="#">Instagram</a>
 							<br>
-								<a href="">Gmail</a>
+								<a href="#">Gmail</a>
 								<br>
-							<a href="">Tele: +351 111 222 22</a>
+							<a href="#">Tele: +351 111 222 22</a>
 				</div> 
 				</div>
 			</div>

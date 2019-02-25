@@ -58,7 +58,7 @@ function News(){
 function Total_Website_Views()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM counters_mikla  WHERE text='Total_Number_Views'";
+	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Number_Views'";
 
 	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
 						
@@ -81,7 +81,7 @@ function Total_Website_Views()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Website_Views = $registo["counter"];
+				$Website_Views = $registo["count"];
 			}
 				
 	}
@@ -90,7 +90,7 @@ function Total_Website_Views()
 function Total_Online_Users()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM counters_mikla  WHERE text='Currently_Online'";
+	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Currently_Online'";
 
 	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
 						
@@ -113,7 +113,7 @@ function Total_Online_Users()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Online_Users = $registo["counter"];
+				$Online_Users = $registo["count"];
 			}
 				
 	}
@@ -122,7 +122,7 @@ function Total_Online_Users()
 function Total_Registered_Users()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM counters_mikla  WHERE text='Total_Registered'";
+	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Registered'";
 
 	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
 						
@@ -145,7 +145,7 @@ function Total_Registered_Users()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Registererd_Users = $registo["counter"];
+				$Registererd_Users = $registo["count"];
 			}
 				
 	}

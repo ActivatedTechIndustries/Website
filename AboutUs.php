@@ -89,12 +89,12 @@
 							<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This woman did our Android application alone because is coworker didnt want to help her</p>
 							</div>
 							<div class="col-md-4 text-center">
-							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw">
+							<img src="Imagens/Carrot.png" style="height:40vh;width:30vw">
 							<p style="color:white">André Marques</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This guy did some java animations and was responsable for the ideas of our site</p>
 							</div>
 							<div class="col-md-4 text-center">
-							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw">
+							<img src="Imagens/Snake.jpeg" style="height:40vh;width:30vw">
 							<p style="color:white">Vasco</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> Just Empty</p>
 							</div>

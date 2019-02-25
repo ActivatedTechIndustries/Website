@@ -46,7 +46,9 @@
 						 <div class="dropdown-divider"></div>
 						  <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>					
+                        <a class="dropdown-item hover_menu_button" href="User_Defenitions.php"><i class="fa fa-wrench" nclick="User_Defenitions.php"></i> Definitions</a>	
+						<div class="dropdown-divider"></div>
+                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>						
                     </div>
                 </li>
 				<!-- Visible Only On Phone -->	
