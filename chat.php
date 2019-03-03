@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -127,7 +128,7 @@ function openchatroom_tele() {
 	}
 </style>
 		
-	<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;max-height:9vh;">
+<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;">
            
 		   <!-- Brand/logo -->
             <a class="navbar-brand " href="index.php" style="color: white">
@@ -178,10 +179,8 @@ function openchatroom_tele() {
 				</div>
 				<hr style="background:white; width:95%; border-width:1px;border-radius:50px">
 				<div class="row">
-				<div class="col-md-12" style="overflow:hidden;height:3.5vh;"> <!-- Not Auto Sizing -->
-				<p href="www.facebook.com"> Facebook: www.facebook.com/User </p>
-				<!-- <p href="www.twitter.com"> Twitter: www.twitter.com/User </p>
-				<p href="www.instagram.com"> Instagram: www.instagram.com/User </p> -->
+				<div class="col-md-12" style="overflow:hidden;height:3.5vh;">
+				<p> Dados da pessoa facebook, twitter, mail etc</p>
 				</div>
 				</div>
 				</div>
@@ -295,7 +294,7 @@ function openchatroom_tele() {
 					<div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
 					<div class="row">
 					<div class="col-md-10" align="right">
-					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);">Hello you are very Vasco</p>
+					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Helllo</p>
 					</div>
 					<div class="col-md-1">
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
@@ -320,7 +319,7 @@ function openchatroom_tele() {
 		<!--Para telemovel-->
 		<?php
 		echo '
-			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:85vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
+			<div id="conversation_tele" class="container-fluid d-sm-none" style="overflow:hidden;height:83vh;background:darkgray;max-width:59%; border-radius: 15px; width:60%; visibility:hidden;float:left" >
 			<div class="row" style="height:75vh">
 				<div class="col-md-12" style="background:darkgray;overflow:auto;">
 					<br>

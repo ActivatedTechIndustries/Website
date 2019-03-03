@@ -2,11 +2,11 @@
 function News(){
 <?php
 	
-	$sql_mikla_news = "SELECT id_news_mikla FROM news_mikla";
+	/*$sql_mikla_news = "SELECT id_data_mikla FROM data_mikla";
 
-	$resultado = mysqli_query($ligacao,$sql_mikla_news);
+	$resultado = mysqli_query($ligacao,$sql_data_mikla);
 						
-	//echo $sql_mikla_news;exit();
+	//echo $sql_data_news;exit();
 					
 	if(!$resultado)
 	{
@@ -21,7 +21,7 @@ function News(){
 		$number=0;
 		$number = rand(1, mysqli_num_rows($resultado));
 
-		$sql = "SELECT * FROM news_mikla WHERE id_news_mikla='".$number."'";
+		$sql = "SELECT * FROM data_mikla WHERE id_data_mikla='".$number."'";
 				
 		//echo $number;
 				
@@ -52,15 +52,15 @@ function News(){
 		}
 	}
 					
-	//var_dump($_SESSION);exit();
+	//var_dump($_SESSION);exit();*/
 ?>
 }
 function Total_Website_Views()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Number_Views'";
+	$sql_data_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Number_Views'";
 
-	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
+	$resultado = mysqli_query($ligacao,$sql_data_mikla);
 						
 	//echo $sql_counters_mikla;exit();
 					
@@ -81,7 +81,7 @@ function Total_Website_Views()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Website_Views = $registo["count"];
+				$Total_Number_Views = $registo["count"];
 			}
 				
 	}
@@ -90,11 +90,11 @@ function Total_Website_Views()
 function Total_Online_Users()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Currently_Online'";
+	$sql_data_mikla = "SELECT * FROM data_mikla  WHERE type='Currently_Online'";
 
-	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
+	$resultado = mysqli_query($ligacao,$sql_data_mikla);
 						
-	//echo $sql_counters_mikla;exit();
+	//echo $sql_count_mikla;exit();
 					
 	if(!$resultado)
 	{
@@ -113,7 +113,7 @@ function Total_Online_Users()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Online_Users = $registo["count"];
+				$Currently_Online = $registo["count"];
 			}
 				
 	}
@@ -122,9 +122,9 @@ function Total_Online_Users()
 function Total_Registered_Users()
 {
 	<?php
-	$sql_counters_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Registered'";
+	$sql_data_mikla = "SELECT * FROM data_mikla  WHERE type='Total_Registered'";
 
-	$resultado = mysqli_query($ligacao,$sql_counters_mikla);
+	$resultado = mysqli_query($ligacao,$sql_data_mikla);
 						
 	//echo $sql_counters_mikla;exit();
 					
@@ -145,7 +145,7 @@ function Total_Registered_Users()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Registererd_Users = $registo["count"];
+				$Total_Registered = $registo["count"];
 			}
 				
 	}
@@ -156,58 +156,5 @@ function Counters()
 	Total_Website_Views();
 	Total_Online_Users();
 	Total_Registered_Users();
-}
-
-function User_Definitions()
-{
-	<?php
-	$sql_user_definitions = "SELECT * FROM users WHERE username='F0ntes'";
-
-	//".$_SESSION["username"]."
-
-	$resultado = mysqli_query($ligacao,$sql_user_definitions);
-						
-	//echo $sql_counters_mikla;exit();
-					
-	if(!$resultado)
-	{
-					
-		echo"
-			alert('Não foi possível ligar á base de dados (Ordem não executada) ');window.location.assign('404page/404.html')";
-	}
-	else
-	{
-		echo"Ordem Executada com Sucesso";
-				
-			//echo $registo;exit();
-			
-			//var_dump($registo = mysqli_fetch_array($resultado));exit();
-			
-			
-			while($registo = mysqli_fetch_array($resultado))
-			{	
-				$username = $registo["username"];
-				$email = $registo["email"];
-				$country = $registo["country"];
-				$password = $registo["password"];
-				
-				if($registo["nickname"] == null){
-					$nickname = "Empty";
-				}
-				else{
-					$nickname = $registo["nickname"];
-				}
-				
-				if($registo["phone_number"] == null){
-					$phone_number = "Empty";
-				}
-				else{
-					$phone_number = $registo["phone_number"];
-				}
-				//$avatar = $registo["avatar"];
-			}
-				
-	}
-	?>
 }
 </script>

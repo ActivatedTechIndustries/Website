@@ -17,7 +17,7 @@
 				
 		function Page_View_Counter(){
 				var downloadTimer = setInterval(function(){
-						//alert("1");
+
 						clearInterval(downloadTimer);
 						
 						//alert("Entrou");
@@ -39,12 +39,12 @@
 									Parsed_View: true
 								}
 							,function(resposta, estado){
-							//alert(resposta + " " + estado);})
+							/*alert(resposta + " " + estado);*/})
 									.done(function() {
 			//alert( "sucesso" );
 		})
 		.fail(function() {
-			//alert( "erro" );
+			alert( "erro" );
 		})
 		.always(function() {
 			//alert( "terminou" );
@@ -57,10 +57,10 @@
 		$.post(
 			"post_timer.php",
 			{
-				Total_View: true
+				Total_View:  true
 			},
 			function(resposta, estado) {
-				//alert(resposta + " " + estado);
+				/*alert(resposta + " " + estado);*/
 				//$("#contentor").prop("innerHTML", resposta);
 			}
 		)
@@ -68,7 +68,7 @@
 			//alert( "sucesso" );
 		})
 		.fail(function() {
-			//alert( "erro" );
+			alert( "erro" );
 		})
 		.always(function() {
 			//alert( "terminou" );
@@ -78,8 +78,7 @@
 						} // Remove This Comment Piece To Work -  Unable to Testing Platform
 				   
 				  
-				},5000); 
-				//alert("2");
+				},5000);
 		}
 		
 // ------------------------------------- View Counter - 2 ------------------------------------- //	

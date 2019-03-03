@@ -2,17 +2,17 @@
 		
 		require "start_db.php";
 		
-		//var_dump($_POST);exit();
+		var_dump($_POST);
 		
 		//isset($_POST["Total_View"]) || isset($_POST["Parsed_View"])
 		
-		if(isset($_POST["Total_View"]) || isset($_POST["Parsed_View"]))
+		if(isset($_POST["Total_Number_Views"]) || isset($_POST["Parsed_Number_Views"]))
 		{
 				//isset($_POST["Parsed_View"])
 				if(isset($_POST["Parsed_View"]))
 				{
 			
-					$sql = "UPDATE data_mikla SET count=count+1 WHERE type='Parsed_Number_Views'";
+					$sql = "UPDATE data_mikla SET count=count+1 WHERE type='Parsed_Number_Views' ";
 					
 					//echo $sql;exit();
 					
