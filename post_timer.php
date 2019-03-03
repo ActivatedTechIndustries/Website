@@ -2,7 +2,7 @@
 		
 		require "start_db.php";
 		
-		var_dump($_POST);
+		//var_dump($_POST);exit();
 		
 		//isset($_POST["Total_View"]) || isset($_POST["Parsed_View"])
 		
@@ -12,7 +12,7 @@
 				if(isset($_POST["Parsed_View"]))
 				{
 			
-					$sql = "UPDATE counters_mikla SET counter=counter+1 WHERE text='Parsed_Number_Views' ";
+					$sql = "UPDATE data_mikla SET count=count+1 WHERE type='Parsed_Number_Views'";
 					
 					//echo $sql;exit();
 					
@@ -36,7 +36,7 @@
 					//var_dump($_SESSION);exit();
 				}
 				
-				$sql = "UPDATE counters_mikla SET counter=counter+1 WHERE text='Total_Number_Views'";
+				$sql = "UPDATE data_mikla SET count=count+1 WHERE type='Total_Number_Views'";
 						
 				//echo $sql;exit();
 						

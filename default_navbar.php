@@ -70,7 +70,7 @@ $(document).ready(function(){
                         <div class="dropdown-divider"></div>
 						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button"  href="navbar_logged_in.php"><i class="fa fa-wrench" onclick="navbar_logged_in.php"></i> Support</a>	
+                        <a class="dropdown-item hover_menu_button"  href="navbar_logged_in.php"><i class="fa fa-wrench" onclick=""></i> Support</a>	
 						<div class="dropdown-divider"></div>						
                         <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>
 						
@@ -107,11 +107,12 @@ $(document).ready(function(){
 				</div>
 			</div>
 			</div>
-		</div>		
+		</div>	
+		<!------------------------ Login ---------------------------------->	
 		<div  id="Login_Overlay" class="Overlay" >
 		<div class="d-flex justify-content-center">
 			  <div align="center" class="lr-div_login d-none d-lg-block" style="margin-top:10%">		  
-			  <form class="align-content-center" style="margin-top:10vh">
+			  <form class="align-content-center" action="login_function.php" method="post" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 			   <br>
 					 <div class="rainbowWrap " id="gradient_login_email" style="border-radius:20px 20px 0px 0px;">
@@ -121,7 +122,7 @@ $(document).ready(function(){
 								</div>
 							</div>
 							
-							<input class="rainbow" style="border-radius:20px 20px 0px 0px  ;" placeholder="Email"   type="email" id="email_Login" />
+							<input class="rainbow" style="border-radius:20px 20px 0px 0px  ;" placeholder="Email"   type="email" id="email_Login" name="email_login"/>
 					</div>
 					
 					 <div class="rainbowWrap d-none d-sm-block" style="border-radius:0px 0px  20px 20px;">
@@ -129,10 +130,10 @@ $(document).ready(function(){
 							<div class="rainbowSd rainbowSd_1" style="border-radius:0px 0px  20px 20px;">
 								</div>
 								</div>
-							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Password" type="password" id="pwd_Login"/>
+							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Password" type="password" id="pwd_Login" name="password_login"/>
 					</div>
 					<br><br>
-					  <button type="submit" class="btn btn-outline-primary2">Submit</button>
+					  <button type="submit" class="btn btn-outline-primary2" name="bLogin">Submit</button>
 					  <br><br>
 					<button type="button" class="btn btn-outline-primary" onclick="LoginOff()" > Exit Overlay </button>
 					<br><br>
@@ -140,7 +141,7 @@ $(document).ready(function(){
 			  </div>	
 				<!--para telemovel-->
 				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:19%;">
-				<form  class="align-content-center" action="/action_page.php" style="margin-top:10vh">
+				<form  class="align-content-center" action="login_function.php" method="post" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 					 <div class="rainbowWrap" style="border-radius:20px 20px 0px 0px;">
 					 
@@ -149,7 +150,7 @@ $(document).ready(function(){
 								</div>
 							</div>
 							
-							<input class="rainbow" style="border-radius:20px 20px 0px 0px  ;" placeholder="Email"   type="email" id="email_Login_tele" />
+							<input class="rainbow" style="border-radius:20px 20px 0px 0px  ;" placeholder="Email"   type="email" id="email_Login_tele" name="email_login_phone" />
 					</div>
 				
 					<div class="rainbowWrap " style="border-radius:0px 0px  20px 20px;">
@@ -157,10 +158,10 @@ $(document).ready(function(){
 							<div class="rainbowSd rainbowSd_1" style="border-radius:0px 0px  20px 20px;">
 								</div>
 								</div>
-							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Password" type="password" id="pwd_Login_tele"/>
+							<input class="rainbow" style="border-radius:0px 0px  20px 20px;" placeholder="Password" type="password" id="pwd_Login_tele" name="password_login_phone"/>
 					</div>
 					  <br><br>
-					  <button type="submit" class="btn btn-outline-primary2">Submit</button>
+					  <button type="submit" class="btn btn-outline-primary2" name="bLogin">Submit</button>
 					<br><br>
 					<button type="button" class="btn btn-outline-primary d-lg-none" onclick="LoginOff()" style="position:relative;"> Exit Overlay </button>
 					<br><br>
@@ -168,7 +169,7 @@ $(document).ready(function(){
 		</div>	 
 		</div>
 	</div>
-	<!--acaba aqui login-->
+	<!------------------------ Login ---------------------------------->	
 	<!--Começa o register-->
 		<div class="Overlay" id="Register_Overlay">
 		  

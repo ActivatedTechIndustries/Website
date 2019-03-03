@@ -1,9 +1,9 @@
 <?php
 	
-	session_start();
+	session_start(); // Inicialização da Sessão
 	//var_dump($_POST);exit();
 	
-	require "start_db.php";
+	require "start_db.php"; // Inicia a Base de Dados
 	
 	if(isset ($_POST["bLogin"]))
 	{
@@ -19,7 +19,7 @@
 		else{
 			echo"
 				<script>
-				alert('Não foi possível validar a sessão');
+				alert('Dados não Inseridos');
 				window.location.assign('404page/404.html')
 				</script>";
 			exit();
@@ -97,12 +97,71 @@
 				
 				//echo $sql;exit(); -- Step 3 - Complete 
 				
-				// Password correta, vamos iniciar sessão 
+				// Password correta, vamos iniciar sessão 	
+
+				$sql = "UPDATE users SET
+				status_display=1 WHERE email='".$email."'";
+		
+				$resultado = mysqli_query($ligacao,$sql);
+		
+				if(!$resultado)
+				{
+						echo"
+							<script>
+							alert('Não foi possível validar a sessão');
+							window.location.assign('404page/404.html')
+							</script>";	
+						exit();
+				}		
+
+				$sql = "SELECT * From users, type_users WHERE id_type = type_user_id_type AND 
+				email='".$email."' AND password=PASSWORD('".$password."')";
+		
+				//echo $sql;exit(); //-- Step 2 - Complete
+		
+				$resultado = mysqli_query($ligacao,$sql);
+		
+				if(!$resultado)
+				{
+					echo"
+						<script>
+						alert('Não foi possível validar a sessão');
+						window.location.assign('404page/404.html')
+						</script>";	
+					exit();
+				}
+
+				if($registo = mysqli_fetch_array($resultado)){
+
+					$_SESSION["username"] = $registo["username"];
+					$_SESSION["email"] = $email;
+					$_SESSION["type"] = $registo["Type"];
+
+					switch ($registo["status_display"])
+					{
+						case 0:
+							$_SESSION["status_inf"] = "Offline"; //Grey
+							$_SESSION["status_color"] = "#949494";
+							break;
+						case 1:
+							$_SESSION["status"] = "Online"; //Green
+							$_SESSION["status_color"] = "#09ff00";
+							break;
+						case 2:
+							$_SESSION["status"] = "Idle"; //Yellow
+							$_SESSION["status_color"] = "#f0ff00";
+							break;
+						case 3:
+							$_SESSION["status"] = "Busy"; //Red
+							$_SESSION["status_color"] = "#ff0000";
+							break;
+						
+					} 
+
+				}
 				
-				/*$_SESSION["email"] = $email;
-				$_SESSION["type"] = $registo["Type"];*/ 
 				// Only Because we Dont Use it Now
-				
+
 				//var_dump($_SESSION);exit();
 				
 				echo"
@@ -136,6 +195,14 @@
 			exit();
 		}
 
+	}
+	else{
+		echo"
+			<script>
+			alert('Não foi possível validar a sessão');
+			window.location.assign('404page/404.html')
+			</script>";
+		exit();
 	}
 	
 ?>
