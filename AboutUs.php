@@ -20,7 +20,7 @@
 </head>
 
 <body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="Page_View_Counter()">
-		<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;">
+		<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;max-height:9vh;">
            
 		   <!-- Brand/logo -->
             <a class="navbar-brand "  href="index.php" style="color: white">

@@ -26,7 +26,7 @@
 	
 	<?php include 'timer.php';?>
 	<?php include 'random_functions.php';?>
-	
+
 	<script>
 	function At_Load()
 	{
@@ -47,9 +47,17 @@
 	
 </head>
 
-<body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="AtLoad();">
+<body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="At_Load();">
 
-        <?php include 'default_navbar.php';?>
+     	<?php 
+     	if(isset($_SESSION["email"]) && $_SESSION["email"] != "" )
+        {
+        	include 'navbar_logged_in.php';
+        }
+        else{
+        	include 'default_navbar.php';
+        }
+        ?>
   <!--//////////////////////////////////////////////////////////////////////////////////////////// Carousel ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 	<div class="container-fluid" id="container_1" style="background:transparent;">
 		<div class="row">
@@ -164,66 +172,74 @@
 			<div class="container-fluid" id="container_news" style="overflow:hidden;">
 				  <div class="row justify-content-center align-items-center">
 							
-							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);overflow: hidden;overflow-x: hidden;max-height:65vh;height:65vh;">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:65vh;height: 65vh;overflow: hidden;overflow-x: hidden;">
 							
 									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
 									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
-									<br><br>
-									<p style="color:white; text-align:center;">Total Website Views</p>
-									<hr style="background-color: white; width:15vw; border-radius:50px;">
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-bottom: -10px;max-height:8vh;overflow:hidden;"><?php echo $Total_Number_Views; ?></h3>
-									<br>
-									<p style="color:white; text-align:center;">    Online Users</p>
-									<hr style="background-color: white; width:12.5vw; border-radius:50px; margin-top: -5px;">
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Currently_Online; ?></h3>
-									<br>
-									<p style="color:white; text-align:center;">  Registered Users</p>
-									<hr style="background-color: white; width:10vw; border-radius:50px; margin-top: -5px;">
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-top: -10px;margin-bottom:2px"><?php echo $Total_Registered; ?></h3>
-									<br>
-							</div>
-							<!--para telemovel-->
-							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-sm-none Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);overflow: hidden;overflow-x: hidden;">
-							
-									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
-									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
-									<br>
-									<p style="color:white; text-align:center;">Total Website Views</p>
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Total_Number_Views; ?></h3>
+									<p style="color:white; text-align:center; margin-top: 17%;">Total Website Views</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Website_Views,0, ',', ' '); ?></h3>
 									<br>
 									
 									<hr style="background-color: white; width:15vw; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center;">    Online Users</p>
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Currently_Online; ?></h3>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Online_Users,0, ',', ' '); ?></h3>
 									<br>
 									
 									<hr style="background-color: white; width:10vw; border-radius:50px; margin-top: -5px;">
 									<p style="color:white; text-align:center;">  Registered Users</p>
-									<h3 style=" font-weight: bold; font-size: auto; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Total_Registered; ?></h3>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo number_format($Registererd_Users,0, ',', ' '); ?></h3>
+									<br><br>
+							</div>
+							<!--para telemovel-->
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4  d-sm-none Container_Conteudo text-center" style="margin-top:1vh; background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(23,118,147,1) 100%);max-height:70vh;height:70vh;overflow: hidden;overflow-x: hidden;">
+							
+									<h1 style=" font-weight: bold; font-size: 40px; color: #50c1e5; text-align:center;font-family: 'Montserrat', sans-serif; "> What we've done: </h1>
+									<hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center; margin-top: 17%;">Total Website Views</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Website_Views; ?></h3>
+									<br>
+									
+									<hr style="background-color: white; width:15vw; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center;">    Online Users</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Online_Users; ?></h3>
+									<br>
+									
+									<hr style="background-color: white; width:10vw; border-radius:50px; margin-top: -5px;">
+									<p style="color:white; text-align:center;">  Registered Users</p>
+									<h3 style=" font-weight: bold; font-size: 30px; color: white; text-align:center; margin-top: -10px; margin-bottom: -10px;"><?php echo $Registererd_Users; ?></h3>
 									<br><br>
 							</div>
 							<div class="col-md-1 col-lg-1 col-xl-1 col-sm-1" style="background-color:transparent;">
 									
 							</div>	
 							<br>
-							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center " style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:65vh;height:65vh;">
-
-                                    <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
-                                    <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
-									<div class="col-md-12" style="height:70%;max-height:70%;overflow:auto;">
-                                    <p style="color:white; font-weight: bold;font-size: auto; margin-top: 17%;max-width:100%;"> As company and as consumers ourselves, we, at Activated Tech Industries, seek to gather statistical information to test, examine and share with the rest of our fellow users, in order to achieve a better standing in quality and customer service. </p>
-									<p style="color:white; font-weight: bold;font-size: auto; margin-top: 17%;max-width:100%;"> As company and as consumers ourselves, we, at Activated Tech Industries, seek to gather statistical information to test, examine and share with the rest of our fellow users, in order to achieve a better standing in quality and customer service. </p>
-								  </div> 
-									<p  style="color:white; font-size: 10px; text-align:right; margin-right: 5%;margin-top:5%;"> -'Information is only useful when it can be understood.'</p>
-									
-							</div>	
-							
-									<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-sm-none Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);">
+							<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-none d-sm-block Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:65vh;height:65vh">
 
                                     <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
                                     <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
 
-                                     <p style="color:white; font-weight: bold;font-size: auto; text-align:center; margin-top: 17%;font-size:auto;"> As company and as consumers ourselves, we, at Activated Tech Industries, seek to gather statistical information to test, examine and share with the rest of our fellow users, in order to achieve a better standing in quality and customer service. </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; margin-top: 17%;"> As company and as consumers ourselves,</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> we, at Activated Tech Industries, seek to</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> gather statistical information to test, </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> examine and share with the rest of our </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> fellow users, in order to achieve a better</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> standing in quality and customer service.</p>
+
+                                    <br>
+
+                                    <p style="color:white; font-size: 10px; text-align:right; margin-right: 5%;"> -'Information is only useful when it can be understood.'</p>
+                            </div>	
+									<div class="col-md-5 col-lg-4 col-xl-4 col-sm-4 d-sm-none Container_Conteudo text-center" style="margin-top:1vh;background: -webkit-linear-gradient(top, rgba(27,35,45,1) 1%,rgba(27,35,45,1) 10%,rgba(93,20,127,1) 100%);max-height:70vh;height:70vh;">
+
+                                    <h1 style=" font-weight: bold; font-size: 40px; color: rgba(93,20,127,1);font-family: 'Montserrat', sans-serif; "> Data Science </h1>
+                                    <hr style="background-color: white; width:20vw; height:0.2vh; border-radius:50px; margin-top: -5px;">
+
+                                    <p style="color:white; font-weight: bold; text-align:center; margin-top: 17%;"> As company and as consumers ourselves,</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> we, at Activated Tech Industries, seek to</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> gather statistical information to test, </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> examine and share with the rest of our </p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> fellow users, in order to achieve a better</p>
+                                    <p style="color:white; font-weight: bold; text-align:center; "> standing in quality and customer service.</p>
 
                                     <br>
 
@@ -232,7 +248,7 @@
 			</div>
 		</div>
        <!-- Footer -->
-	   		<div class="container-fluid sticky-bottom" style="background:#333;margin-top:5%;">
+	   		<div class="container-fluid sticky-bottom" style="background:#333;margin-top:5%; height: auto;">
 		<div class="row justify-content-center align-items-center"> <br> </div>
 		<div class="row justify-content-center align-items-center"> <h3 style="color: #50c1e5;"> <strong>Powered By:</strong></h3> </div>
 		<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.1vh; border-radius:50px; margin-bottom: 5vh;">
@@ -327,7 +343,6 @@
 		 
 		 
 		 <!-- Footer -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>

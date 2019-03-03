@@ -175,6 +175,8 @@
 			.lr-div_login
 			{
 				width: 35vw; 
+				max-height: 65vh; 
+				height: auto;
 				position:relative;
 				background-color:  #333; 
 				border-radius:30px;
@@ -184,6 +186,8 @@
 			.lr-div_login_tele
 			{
 				width: 65vw; 
+				height: 75vh; 
+				height: auto;
 				position:fixed;
 				background-color:  #333; 
 				border-radius:30px;
@@ -192,14 +196,17 @@
 			.lr-div_register
 			{
 				width: 35vw; 
+				height: 70vh; 
+				height: auto;
 				position:fixed;
 				background-color:  #333; 
 				border-radius:30px;
-				height:auto;
 			}
 			.lr-div_register_tele
 			{
 				width: 75vw; 
+				height: auto;
+				height: 95vh; 
 				position:fixed;
 				background-color:  #333; 
 				border-radius:30px;
@@ -274,3 +281,4 @@
 						position:relative;
 						color:white;
 		}
+		
