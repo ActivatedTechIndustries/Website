@@ -145,7 +145,7 @@ function Total_Registered_Users()
 			
 			while($registo = mysqli_fetch_array($resultado))
 			{
-				$Registererd_Users = $registo["count"];
+				$Registered_Users = $registo["count"];
 			}
 				
 	}

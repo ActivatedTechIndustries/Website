@@ -1,9 +1,3 @@
-<?php
-
-	session_start();
-
-	require "start_db.php";
-?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,19 +13,47 @@
 	<link href="style.css" rel="stylesheet">
 	<link  href="scrollbar.css" rel="stylesheet">
 	</head>
-
-	<?php include 'random_functions.php';?>
-
-	<script type="text/javascript">
-		function AtLoad(){
-			User_Definitions();
-		}
-	</script>
-
 <body style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="AtLoad();">
+<nav id="nav1" class="navbar navbar-expand-md navbar-dark " style="background-color: #333;">
+           
+		   <!-- Brand/logo -->
+            <a class="navbar-brand " href="index.php" style="color: white">
+                <img src="imagens/favicon_logo.png"  alt="Logo" style="width: 40px;cursor:pointer;">
+            </a>
+            <a class="navbar-brand d-none d-sm-block" href="index.php" style="color: white;cursor:pointer;">Activated Tech Industries</a>
+			<a class="navbar-brand d-block d-sm-none" href="index.php" style="color: white;font-size:medium; cursor:pointer;">Activated Tech Industries</a>
+			<!-- Brand/logo -->
+			
+			<!-- Navbar Items -->
+			
+            <ul class="navbar-nav a ml-auto" id="drop1">
 
-	<?php include 'navbar_logged_in.php'; ?>
-
+                <li class="nav-item dropdown d-none d-sm-block" id="dropdown_toggle">
+                    <a class="nav-link dropdown-toggle hover_button" href="chat.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Menu
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right " style="text-align: center; overflow:auto;" aria-labelledby="navbarDropdown">
+						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-home " href="index.php"></i> Home</a>
+						 <div class="dropdown-divider"></div>
+                        <a class="dropdown-item hover_menu_button" href="#"><i href="#" class="fa fa-wrench"></i> Support</a>		
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>						
+                    </div>
+                </li>
+				<!-- Visible Only On Phone -->	
+				</ul>
+				<li class="nav-item dropdown d-block d-sm-none" id="dropdown_toggle" style="z-index:10;">
+                    <a class="nav-link dropdown-toggle hover_button_tele" href="chat.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Menu
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right " style="text-align: center; overflow:auto;" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-sign-in " href="index.php"></i> Home</a>
+						<div class="dropdown-divider"></div>
+                        <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>				
+						<div class="dropdown-divider"></div>						
+                        <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>
+                    </div>
+                </li>
+				<!-- Visible Only On Phone end -->
+        </nav>
 		<div class="container-fluid">
 		<br>
 		<div class="container-fluid" style="max-height:20vh">
@@ -64,7 +86,7 @@
 		<p style="font-size:20px;color:white;">Username:</p>
 		</div>
 		<div class="col-md-9 box_Info" >
-		  <p style="color:rgba(1,168,183,1);margin-top:1%;"><?php echo $username ?></p>
+		  <p style="color:white;margin-top:1%;"> Your Username is ...</p>
 		</div>
 		<br><br><br>
 		</div>
@@ -73,7 +95,7 @@
 		<p style="font-size:20px;color:white;">Nickname:</p>
 		</div>
 		<div class="col-md-9 box_Info" >
-		  <p style="color:rgba(1,168,183,1);margin-top:1%;"><?php echo $nickname ?></p>
+		  <p style="color:white;margin-top:1%;"> Your Nickname is ...</p>
 		</div>
 		<br><br><br>
 		</div>
@@ -82,7 +104,7 @@
 		<p style="font-size:20px;color:white;">Email:</p>
 		</div>
 		<div class="col-md-9 box_Info" >
-		  <p style="color:rgba(1,168,183,1);margin-top:1%;"><?php echo $email ?></p>
+		  <p style="color:white;margin-top:1%;"> Your Email is ...</p>
 		</div>
 		<br><br><br>
 		</div>
@@ -91,7 +113,7 @@
 		<p style="font-size:20px;color:white;">Phone Number:</p>
 		</div>
 		<div class="col-md-9 box_Info" >
-		  <p style="color:rgba(1,168,183,1);margin-top:1%;"><?php echo $phone_number ?></p>
+		  <p style="color:white;margin-top:1%;"> Your Phone Number is ...</p>
 		</div>
 		<br><br><br>
 		</div>
@@ -100,7 +122,7 @@
 		<p style="font-size:20px;color:white;">Country:</p>
 		</div>
 		<div class="col-md-9 box_Info" >
-		  <p style="color:rgba(1,168,183,1);margin-top:1%;"><?php echo $country ?></p>
+		  <p style="color:white;margin-top:1%;"> Your Country is ...</p>
 		</div>
 		<br><br><br><br>
 		</div>

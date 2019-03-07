@@ -67,10 +67,8 @@ $(document).ready(function(){
 
                         <a class="dropdown-item hover_menu_button " id="Login_Button7" onclick="LoginOn()" style="cursor:pointer;"> <i class="fa fa-sign-in "  onclick="LoginOn()"></i> Login</a>
                         <a class="dropdown-item hover_menu_button " id="Register_Button8" onclick="RegisterOn()" style="cursor:pointer;"><i class="fa fa-sign-in "  onclick="RegisterOn()"></i> Register</a>
-                        <div class="dropdown-divider"></div>
-						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button"  href="navbar_logged_in.php"><i class="fa fa-wrench" onclick=""></i> Support</a>	
+                        <a class="dropdown-item hover_menu_button"  href="#"><i class="fa fa-wrench" onclick=""></i> Support</a>	
 						<div class="dropdown-divider"></div>						
                         <a class="dropdown-item hover_menu_button" href="AboutUs.php"><i class="fa fa-wrench"></i>About Us</a>
 						
@@ -85,8 +83,6 @@ $(document).ready(function(){
 
                         <a class="dropdown-item hover_menu_button " id="Login_Button7" onclick="LoginOn()" style="cursor:pointer;"> <i class="fa fa-sign-in "  onclick="LoginOn()"></i> Login</a>
                         <a class="dropdown-item hover_menu_button " id="Register_Button8" onclick="RegisterOn()" style="cursor:pointer;"><i class="fa fa-sign-in "  onclick="RegisterOn()"></i> Register</a>
-                        <div class="dropdown-divider"></div>
-						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="index.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
                         <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i>Support</a>	
 						<div class="dropdown-divider"></div>						
@@ -140,7 +136,7 @@ $(document).ready(function(){
 				</form>
 			  </div>	
 				<!--para telemovel-->
-				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:19%;">
+				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:19%;max-height:65%;">
 				<form  class="align-content-center" action="login_function.php" method="post" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 					 <div class="rainbowWrap" style="border-radius:20px 20px 0px 0px;">
@@ -235,7 +231,7 @@ $(document).ready(function(){
 				<br><br>
 				</div>	 
 				<!--para telemovel-->
-				<div  align="center" class="lr-div_register_tele d-sm-none " style="margin-top:-2%;height:80vh;margin-top:15%;">
+				<div  align="center" class="lr-div_register_tele d-sm-none " style="margin-top:-2%;margin-top:15%;max-height:80%;">
 				
 				<form  class="align-content-center" action="register_function.php" method="post" style="margin-top:10vh;">
 				  <div class="Title d-block  font_text"><p>Register</p></div>	
@@ -285,7 +281,7 @@ $(document).ready(function(){
 								</script>
 					</select>
 					</div>
-					<br><br>
+					<br>
 					  <button type="submit" class="btn btn-outline-primary2" style="margin-bottom:5%;" name="bRegister_Phone" value="bRegister_Phone">Submit</button>
 					  <br>
 					<button type="button" class="btn btn-outline-primary" style="margin-right:1.5%;" onclick="RegisterOff()"> Exit Overlay </button>
