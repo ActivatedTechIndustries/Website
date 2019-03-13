@@ -39,7 +39,8 @@
 									Parsed_View: true
 								}
 							,function(resposta, estado){
-							//alert(resposta + " " + estado);})
+							//alert(resposta + " " + estado);
+							})
 									.done(function() {
 			//alert( "sucesso" );
 		})

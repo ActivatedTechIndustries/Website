@@ -49,15 +49,17 @@
 </head>
 
 <body id="body1"  style="max-width:100%;overflow-x:hidden; background: rgb(27,35,45);background: -moz-linear-gradient(top, rgba(27,35,45,1) 64%, rgba(27,35,45,1) 85%);background: -webkit-linear-gradient(top, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);background: linear-gradient(to bottom, rgba(27,35,45,1) 64%,rgba(27,35,45,1) 85%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b232d', endColorstr='#1b232d',GradientType=0 );" onload="At_Load();">
+	<span id="barras">
 	<?php 
-     	if(isset($_SESSION["email"]) && $_SESSION["email"] != "" )
+		if(isset($_SESSION["email"]) && $_SESSION["email"] != "" )
         {
         	include 'navbar_logged_in.php';
         }
         else{
         	include 'default_navbar.php';
         }
-        ?>
+    ?>
+	</span>
   <!--//////////////////////////////////////////////////////////////////////////////////////////// Carousel ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 	<div class="container-fluid" id="container_1" style="background:transparent;">
 		<div class="row">
@@ -102,8 +104,8 @@
                     <div class="overlay d-flex align-items-center" style="overflow:hidden;max-height:60vh;height:60vh;width:100%;">
                     <div class="container-fluid" style="position:absolute;background-color:gray; height:80%;width:100%;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;">
                         <div class="row">
-                            <div class="col-md-12">
-                                <p class="text-center" style=""><?php echo $Content ?></p>
+                            <div class="col-md-12 ">
+                                <p class="text-center" style="color:white"><?php echo $Content ?></p>
                             </div>
                         </div>
                     </div>
@@ -149,7 +151,7 @@
 							</p>
 
 					<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; ">
-					
+					<br><br>
 					</div>
 				</div>
 			</div>
@@ -165,6 +167,7 @@
 							The medieval Vikings, who had contacts with the Byzantine empire through their expansion through eastern Europe, used the Old Norse name 'Miklagard' to describe the greatest city that they had ever encountered. These were the meeting grounds for a plethora of cultures and religions, anchoring ships of trade and war from far and wide, gathering all manifestation of interaction between the different collectives. Mikla,  has the same ambition.
 							</p>
 					<hr style="background-color: rgba(1,168,183,1); width:95%; height:0.2vh; border-radius:50px; margin-top:47%;">
+					
 					</div>
 				</div>
 			</div>

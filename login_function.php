@@ -136,27 +136,7 @@
 					$_SESSION["username"] = $registo["username"];
 					$_SESSION["email"] = $email;
 					$_SESSION["type"] = $registo["Type"];
-
-					switch ($registo["status_display"])
-					{
-						case 0:
-							$_SESSION["status_inf"] = "Offline"; //Grey
-							$_SESSION["status_color"] = "#949494";
-							break;
-						case 1:
-							$_SESSION["status"] = "Online"; //Green
-							$_SESSION["status_color"] = "#09ff00";
-							break;
-						case 2:
-							$_SESSION["status"] = "Idle"; //Yellow
-							$_SESSION["status_color"] = "#f0ff00";
-							break;
-						case 3:
-							$_SESSION["status"] = "Busy"; //Red
-							$_SESSION["status_color"] = "#ff0000";
-							break;
-						
-					} 
+					$_SESSION["status_number"] = 1;
 
 				}
 				

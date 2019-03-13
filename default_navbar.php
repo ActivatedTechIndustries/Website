@@ -118,7 +118,7 @@ $(document).ready(function(){
 								</div>
 							</div>
 							
-							<input class="rainbow" style="border-radius:20px 20px 0px 0px  ;" placeholder="Email"   type="email" id="email_Login" name="email_login"/>
+							<input class="rainbow" style="border-radius:20px 20px 0px 0px;" placeholder="Email" type="email" id="email_Login" name="email_login"/>
 					</div>
 					
 					 <div class="rainbowWrap d-none d-sm-block" style="border-radius:0px 0px  20px 20px;">
@@ -136,7 +136,7 @@ $(document).ready(function(){
 				</form>
 			  </div>	
 				<!--para telemovel-->
-				<div  align="center" class="lr-div_login_tele d-lg-none" style="margin-top:19%;max-height:65%;">
+				<div  align="center" class="lr-div_login_tele d-sm-none" style="margin-top:19%;max-height:65%;">
 				<form  class="align-content-center" action="login_function.php" method="post" style="margin-top:10vh">
 			   <div class="Title font_text"><p>Login</p></div>
 					 <div class="rainbowWrap" style="border-radius:20px 20px 0px 0px;">
@@ -285,6 +285,7 @@ $(document).ready(function(){
 					  <button type="submit" class="btn btn-outline-primary2" style="margin-bottom:5%;" name="bRegister_Phone" value="bRegister_Phone">Submit</button>
 					  <br>
 					<button type="button" class="btn btn-outline-primary" style="margin-right:1.5%;" onclick="RegisterOff()"> Exit Overlay </button>
+					<br><br>
 					</div>		   
 			</form>		
 			  </div>	
