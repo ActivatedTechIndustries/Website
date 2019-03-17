@@ -66,7 +66,7 @@
 		<div class="container-fluid d-none d-md-block" style="overflow:hidden">
 				<div class="row">
 					<div class="col-md-12" style="overflow:hidden">
-							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Os Grandes <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
+							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Our Team <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
 							<div class="container-fluid" style="height:53vh;">
 							<div class="row">
 							<div class="col-md-6 text-center">
