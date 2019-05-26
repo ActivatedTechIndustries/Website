@@ -136,7 +136,8 @@
 					$_SESSION["username"] = $registo["username"];
 					$_SESSION["email"] = $email;
 					$_SESSION["type"] = $registo["Type"];
-					$_SESSION["status_number"] = 1;
+					$_SESSION["status_number"] = 1;						
+					
 
 				}
 				

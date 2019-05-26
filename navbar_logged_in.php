@@ -31,10 +31,11 @@
 					//alert( "terminou" );
 				});
 		}
-
+		$( "input" ).focus(function() {
+		  $( this ).css({"min-width": "20vw"});
+		});
 		</script>
- 
-		<nav  class="navbar navbar-expand-md navbar-dark" id="logged_in_navbar" style="background-color: #333;">       
+		<nav  class="navbar navbar-expand-md navbar-dark" style="background-color: #333;">       
 		   <!-- Brand/logo -->
             <a class="navbar-brand d-none d-sm-block" href="index.php" style="color: white">
                 <img src="imagens/favicon_logo.png"  alt="Logo" style="width: 40px;cursor:pointer;">
@@ -50,7 +51,7 @@
 			<div class="container-fluid d-none d-sm-block" style="width:20%;height:40px;">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="search-box d-flex align-items-center" style="margin-top:22px">
+						<div id="box_search" class="search-box d-flex align-items-center" style="margin-top:22px">
 							<input  class="search-txt" type="text" name="" placeholder="Type what you want to search">
 							<a class="search-btn " align="center" href="#"><i class="fa fa-search" ></i></a>
 						</div>
@@ -58,13 +59,13 @@
 				</div>
 			</div>
 			<!--Para telemovel-->
-			<a class=" d-sm-none" style="width:10%;"></a>
-			<div class="container-fluid d-sm-none" style="max-width:25%;height:100%;background-color:white">
+			<a class="d-sm-none" style="width:10%;"></a>
+			<div class="container-fluid d-sm-none" style="max-width:25%;height:100%;">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="box_tele d-flex align-items-center" style="width:50vw" >
 							<input  class="txt_tele" type="text" name="" style="width:90%" placeholder="Go hunt">
-							<a class="btn_tele " style="float:right" align="center" href="#"><i class="fa fa-search" ></i></a>
+							<a class="btn_tele " style="float:right" href="#"><i class="fa fa-search" ></i></a>
 						</div>
 					</div>
 				</div>
@@ -73,7 +74,7 @@
 					<img class="d-none d-sm-block"src="imagens/user_icon.png" style="width:40px;">
 			</a>
 			<a class="nav-item d-flex align-items-center ml-auto" style="color: white;margin-right:2%;">
-					<a class="d-none d-sm-block" style="color:white!important;margin-right:2%;"><?php echo $_SESSION["username"]?></a>
+					<a class="d-none d-sm-block" style="color:white!important;margin-right:2%;cursor:default;"><?php echo $_SESSION["username"]?></a>
 			</a>
 			 <li class="nav-item dropdown d-none d-sm-block" id="dropdown_toggle">                 
 				    <a class="nav-link dropdown-toggle" id="status_dropdown" style="cursor: pointer;color:<?php echo $status_infs[$_SESSION["status_number"]][1]?>!important;"role="button" data-toggle="dropdown" aria-expanded="false"><?php echo $status_infs[$_SESSION["status_number"]][0]?> </a>
@@ -140,7 +141,7 @@
                 </li>
 			
             <ul  class="navbar-nav a ml-auto">
-                <li class="nav-item dropdown d-none d-sm-block" id="dropdown_toggle">
+                <li class="nav-item dropdown d-none d-md-block" id="dropdown_toggle">
                     <a class="nav-link dropdown-toggle hover_button" href="chat.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Menu
                     </a>
                     <div class="dropdown-menu dropdown-menu-right ml-auto" style="text-align: center; overflow:auto;" aria-labelledby="navbarDropdown">
@@ -148,11 +149,11 @@
 						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-home " href="index.php"></i> Home</a>
 						 <div class="dropdown-divider"></div>
 						  <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
-                        <a class="dropdown-item hover_menu_button" href="User_Definitions.php"><i class="fa fa-wrench" onclick="User_Definitions.php"></i> Definitions</a>	
+                        <a class="dropdown-item hover_menu_button" href="User_Definitions.php"><i class="fa fa-user-cog" onclick="User_Definitions.php"></i> Definitions</a>
 						<div class="dropdown-divider"></div>
                         <a class="dropdown-item hover_menu_button" href="#"><i class="fa fa-wrench"></i> Support</a>
 						<div class="dropdown-divider"></div>
-                        <a class="dropdown-item hover_menu_button" href="logout_function.php"><i class="fa fa-wrench" onclick="logout_function.php"></i> Log Out</a>						
+                        <a class="dropdown-item hover_menu_button" href="logout_function.php"><i class="fa fa-sign-out" onclick="logout_function.php"></i> Log Out</a>		
                     </div>
                 </li>
 				<!-- Visible Only On Phone -->	
@@ -162,13 +163,15 @@
                     </a>
 						<div class="dropdown-menu dropdown-menu-right " style="text-align: center; overflow:auto;" aria-labelledby="navbarDropdown">
 						 <a>Your Profile</a>
-						<a class="dropdown-item hover_menu_button" href="chat.php"><?php echo $_SESSION["username"] ?></a>
+						<a class="dropdown-item hover_menu_button"  style="cursor:default"><?php echo $_SESSION["username"] ?></a>
 						<div class="dropdown-divider"></div>
 						 <a class="dropdown-item hover_menu_button" href="index.php"><i class="fa fa-sign-in " href="index.php"></i> Home</a>
 						 <div class="dropdown-divider"></div>
 						 <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-comments-o"  onclick="chat.php"></i> Chat</a>
 						 <div class="dropdown-divider"></div>
                         <a class="dropdown-item hover_menu_button" href="chat.php"><i class="fa fa-wrench"></i> Support</a>	
+						<div class="dropdown-divider"></div>
+                        <a class="dropdown-item hover_menu_button" href="logout_function.php"><i class="fa fa-sign-out" onclick="logout_function.php"></i> Log Out</a>
                     </div>
                 </li>
 				<!-- Visible Only On Phone end -->

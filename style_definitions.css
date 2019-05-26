@@ -30,7 +30,10 @@
 			width:41vh;
 			border-radius:20px 20px 20px 20px;
 		}
-		::-webkit-input-placeholder
+		::placeholder
 		{
 			color:white;
+		}
+		.input {
+			padding: 0px 10px;
 		}

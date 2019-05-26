@@ -37,37 +37,6 @@
 			-webkit-transition: 2s;
 			transition: 2s;
 			height:85vh;
-			background-color:lightgray;
 			border-radius: 15px;
 		}
-		.search_chat
-		{
-			position:absolute;
-			transform: translate(-50%, -50%);
-			background: #333;
-			height: 40px;
-			border-radius: 40px;
-			padding: 10px;
-			border:1px solid;
-			border-color:white;
-			width:15vw;
-		}
-		.search_txt_chat
-		{
-			background: #333;
-			height:30px;
-			position:relative;
-			outline:none;
-			border-radius: 50px;
-			width:350px;
-			border:none;
-			color:white;
-			transition:0.5s;
-		}
-		.search_btn_chat
-		{
-			border-radius: 50px;
-			background:#333;
-			float:right;
-			width:20px;
-		}
+		

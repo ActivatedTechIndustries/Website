@@ -1,0 +1,19 @@
+		.container_support
+		{
+			background:gray;
+			overflow:hidden;
+		}
+		.overlay_support
+		{
+			display: inline-block;
+			background:black;
+			float: left;
+			-webkit-transition: 2s;
+			transition: 2s;
+			height:50vh;
+			
+		}
+		.overlay_support:hover
+		{
+			margin-left:50%;
+		}

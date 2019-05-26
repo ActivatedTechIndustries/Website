@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="style.css" rel="stylesheet">
 	<link href="chat_style.css" rel="stylesheet">
-	<link  href="scrollbar.css" rel="stylesheet">
 	<link href="style_logged_in.css" rel="stylesheet">
+	<link href="scrollbar.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 <body>
@@ -26,7 +26,7 @@
 function openLeftMenu() {
 	document.getElementById("leftMenu").style.display = "block";
 	document.getElementById("open").hidden = true;
-	document.getElementById("close").hidden = false;			
+	document.getElementById("close").hidden = false;	
 	document.getElementById("container_open").style="width:19.5vw";
 }
 function closeLeftMenu() {
@@ -52,12 +52,11 @@ function openchatroom() {
 	document.getElementById("conversation").style.height = "85vh";
 	document.getElementById("conversation").style.transition = "2s";
 	document.getElementById("conversation").style.width="49%";
-
 	}
 	else
 	{
 	document.getElementById("conversation").style.marginTop = "40vh";
-	document.getElementById("conversation").style.transition = "1.5s";
+	document.getElementById("conversation").style.transition = "2s";
 	document.getElementById("conversation").style.height = "0px";
 	document.getElementById("conversation").style.width = "0px";
 	document.getElementById("conversation").style.visibility = "Hidden";
@@ -66,16 +65,15 @@ function openchatroom() {
 function Show_Containers()
 {
 	if (document.getElementById("conversation").style.visibility == "visible")
-	{
+	{	
 		document.getElementById("container_head").style.visibility = "visible";
 		document.getElementById("container_body").style.visibility = "visible";
-		document.getElementById("container_footer").style.visibility = "visible";
+		
 	}
 	else
 	{
 		document.getElementById("container_head").style.visibility = "hidden";
 		document.getElementById("container_body").style.visibility = "hidden";
-		document.getElementById("container_footer").style.visibility = "hidden";
 	}
 }
 
@@ -91,6 +89,16 @@ function openchatroom_tele() {
 	}
 	
 }
+<!-- Ultima Mensagem-->
+	$(document).ready(function(){
+		jQuery("div#row_conversation").scrollTop(jQuery("div#row_conversation")[0].scrollHeight);
+	}	);
+	
+	// Faz a scrollbar ir para baixo
+	function Last_Message()
+	{
+		jQuery("div#row_conversation").scrollTop(jQuery("div#row_conversation")[0].scrollHeight);
+	}
 </script>
 <style>
 	body
@@ -129,13 +137,60 @@ function openchatroom_tele() {
 	}
 	::placeholder
 	{
-		color:black;
-		margin-left:5vw;
+		color:white;
+		
 	}
+	.searchbar_box
+	{		
+		background: #333;
+		height: 40px;
+		border-radius: 40px;
+		padding: 10px;
+		border:1px solid;
+		border-color:white;
+	}
+	.searchbar_txt
+	{
+		background: #333;
+		height:30px;
+		position:relative;
+		outline:none;
+		
+		border:none;
+		color:white;
+		transition:0.5s;
+	}
+	.searchbar_btn
+	{
+		border-radius: 50px;
+		background:#333;
+		float:right;
+		width:20px;
+	}
+	.input {
+	  padding: 0px 10px;
+	}
+	.message_down
+	{
+		margin-top:1%;
+		border-radius:50%;
+		background:darkgray;
+		width:60px;
+		height:60px;
+		margin-bottom:0.3%;
+		cursor:pointer;
+		opacity:0.3;
+		position:absolute;
+		z-index:2;
+	}
+	.message_down:hover {
+		transition:0.8s;
+        opacity:1;
+    }
 </style>
 		
-    <span id="barras">
-	<?php 
+        <span id="barras">
+		<?php 
 		if(isset($_SESSION["email"]) && $_SESSION["email"] != "" )
         {
         	include 'navbar_logged_in.php';
@@ -145,49 +200,62 @@ function openchatroom_tele() {
         }
     ?>
 	</span>
-		
+		<!--usar este metodo(target="_blank") para abrir o link numa nova página-->
 		<br>
 		<div class="container-fluid d-none d-sm-block" style="max-width:25%; float:left;">
-				<div class="container-fluid text-center " style="height:20vh; border-radius: 10px; background:#4A8BF1">
+				<div class="container-fluid text-center " style="height:20vh; border-radius: 10px; background:transparent; border:1px solid;border-color:white;">
 				<div class="row">
-				<div class="col-md-12" style="overflow:hidden">
-				<img href="#" src="Imagens/icon-fb.png" style="height:5vh; float:left;padding:10px 0px 0px">
-				<p style="padding:10px 0px 0px; cursor:default;"> Nome da pessoa</p>
-				<hr style="background:white; width:95%; border-width:1px;border-radius:50px;margin-top:-4%;">
+				<div class="col-md-12" style="overflow:hidden;">
+				<p style="padding:10px 0px 0px; cursor:default;color:white"><?php echo $_SESSION["username"]?></p>
+				<hr style="background:white; width:95%; border-width:1px;border-radius:50px;margin-top:-2%;">
 				</div>
 				</div>
-				<p style="padding:10px 0px 0px; cursor:default;"> Nome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoaNome da pessoa</p>
+				<div class="row">
+				<div class="col-md-12">
+						<div class="searchbar_box d-flex align-items-center" >
+							<input  class="searchbar_txt" type="text" name="" style="width:90%" placeholder="Find your Friends">
+							<a class="searchbar_btn " style="float:right" href="#"><i class="fa fa-search" ></i></a>
+						</div>
 				</div>
-				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
+				</div>
+			</div>
 				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
 				<?php
                     echo "
-                    <div class='row' >
-                    <div class='col-md-12 Container_Friends text-center' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
-                       <p  style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
+                    <div class='row' style='margin-bottom:3%;padding:5px' >
+                    <div class='col-md-12 Container_Friends text-center d-flex align-items-center' onclick='openchatroom();setTimeout(Show_Containers, 600);'>
+						<div class='col-md-1'>
+							<img href='#' src='Imagens/user_icon.png' style='width:40px;height:40px; float:left;'>
+						</div>
+						<div class='col-md-11'>
+							<p  style='-webkit-touch-callout: none;-webkit-user-select: none; -khtml-user-select: none;-moz-user-select: none; -ms-user-select: none;'>Amigo</p>
+						</div>
                     </div>
-                    </div>";
+                    </div>
+					";
                 ?>
 				</div>
 		</div>
 		<!--Para telemovel-->		
 		<div class="container-fluid d-sm-none" style="max-width:40%; float:left;">
-				<div class="container-fluid text-center " style="height:15vh; border-radius: 10px; background:#4A8BF1">
+				<div class="container-fluid text-center " style="height:20vh; border-radius: 10px; background:transparent; border:1px solid;border-color:white;">
 				<div class="row">
-				<div class="col-md-12" style="height:6vh; overflow:hidden">
-				<img href="#" src="Imagens/icon-fb.png" style="height:6vh; float:left;padding:10px 0px 0px">
-				<p style="padding:10px 0px 0px; cursor:default;"> Nome da pessoa</p>
+				<div class="col-md-12" style="height:6vh; overflow-y:hidden; overflow-x:auto;">
+				<p style="padding:10px 0px 0px; cursor:default;color:white"><?php echo $_SESSION["username"]?></p>
 				</div>
 				</div>
-				<hr style="background:white; width:95%; border-width:1px;border-radius:50px">
+				<hr style="background:white; width:95%; border-width:1px;border-radius:50px; margin-top:-0.5%;">
 				<div class="row">
-				<div class="col-md-12" style="overflow:hidden;height:3.5vh;">
-				<p> Dados da pessoa facebook, twitter, mail etc</p>
+				<div class="col-md-12" style="overflow:hidden;">
+				<div class="searchbar_box d-flex align-items-center" >
+							<input  class="searchbar_txt" type="text" name="" style="width:90%" placeholder="Find your Friends">
+							<a class="searchbar_btn " style="float:right" href="#"><i class="fa fa-search" ></i></a>
+						</div>
 				</div>
 				</div>
 				</div>
 				<hr style="background:white; width:95%; border-width:2px;border-radius:50px">
-				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white;">
+				<div class="container-fluid" style="max-height:65vh;overflow:auto; border-radius: 15px;color:white; ">
 				<?php
 				echo"
 				<div class='row'>
@@ -210,11 +278,11 @@ function openchatroom_tele() {
 		</div>
 		</div>
 		</div>
-		<div class="w3-sidebar w3-bar-block w3-card w3-animate-left " style="display: none; float: right;" id="leftMenu">
+		<div class="w3-sidebar w3-bar-block w3-card w3-animate-left " style="display: none; float: right; border-radius: 15px;border:1px solid; border-color:white;" id="leftMenu">
 			<div class="container Open_left" id="container_open"  >
 			<div class="row" id="Text_News" hidden>
 			<div class="col-md-12 text-center" style="height:30%;margin-top:2%;">
-			<p> Imagens</p>
+			<p style="color:white;"><strong>Your Images</strong></p>
 			</div>
 			</div>
 			<div class="row text-center"style="max-height:90%;overflow:auto;" id="Image_chat" hidden >
@@ -250,28 +318,60 @@ function openchatroom_tele() {
 		?>
 		<?php
 		echo '
-		<div id="conversation"  class="container-fluid d-none d-lg-block" style="margin-top:40vh;overflow:hidden;height:0px;background:darkgray;max-width:58%; border-radius: 15px; width:0px; visibility:hidden;float:left" >
-			<div class="row" style="height:75vh">
-				<div class="col-md-12" style="background:darkgray;">
+		<div id="conversation"  class="container-fluid d-none d-md-block" style="overflow:hidden;max-height:85vh;margin-top:40vh;height:0px;background:transparent;max-width:58%; border-radius: 15px;border:1px solid; border-color:white; width:0px; visibility:hidden;float:left;" >
+			<!--<div class="container message_down" onclick="Last_Message()">
+					<div class="row">
+						<div class="col-md-12 d-flex align-items-center justify-content-center" style="width:60px; height:60px;">
+							<a><img  src="Imagens/uparrow.png"></a>
+						</div>
+					</div>
+				</div>-->
+			<div class="row chat" id="row_conversation" style="height:75vh;overflow:auto;" >
+				<div class="col-md-12">
 					<br>
-					<div id="container_head"class="container-fluid" style="overflow: hidden;padding:10px 0px 0px;visibility:hidden">
+					<div id="container_head" class="container-fluid">
 					<div class="row">
 					<div class="col-md-1">
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
 					</div>
-					<div class="col-md-10">
-					<p style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:100%;" > Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
+					<div class="col-md-10" style="max-width:82.5%">
+					<p style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:100%;padding:5px 5px;" > Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
 					</div>
 					</div>
 					</div>
-					<br>
-					<div id="container_body" class="container-fluid" style=" padding:10px 0px 0px; visibility:hidden">
+					<div id="container_body" class="container-fluid">
 					<div class="row">
-					<div class="col-md-10" align="right">
-					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);"> Hello you are very Vasco</p>
+					<div class="col-md-3"></div>
+					<div class="col-md-9" align="right" style="padding:25px">
+					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);padding:5px 5px;">  Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
 					</div>
+					</div>
+					</div>
+					<div id="container_head" class="container-fluid">
+					<div class="row">
 					<div class="col-md-1">
 					<img style="max-height:40px;" src="Imagens/user_icon.png">
+					</div>
+					<div class="col-md-9">
+					<p style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:100%;padding:5px 5px;" > Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
+					</div>
+					</div>
+					</div>
+					<div id="container_body" class="container-fluid">
+					<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-9" align="right" style="padding:25px">
+					<p style="overflow-wrap: break-word;margin-right:-2%;overflow:hidden;border-radius:10px;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);padding:5px 5px;">  Hey Hey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey HeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHeyHey</p>
+					</div>
+					</div>
+					</div>
+						<div id="container_head" class="container-fluid">
+					<div class="row">
+					<div class="col-md-1">
+					<img style="max-height:40px;" src="Imagens/user_icon.png">
+					</div>
+					<div class="col-md-9">
+					<p style="overflow-wrap: break-word;border-radius:10px;overflow: hidden;background-image: linear-gradient(to right, #8A2BE2, #4A8BF1);max-width:100%;padding:5px 5px;" > O Vasco é Gay </p>
 					</div>
 					</div>
 					</div>
@@ -279,16 +379,15 @@ function openchatroom_tele() {
 				</div>';
 				?>
 				<div class="row" style="height:10vh;">
-				<div id="container_footer" class="col-md-12" style="background:darkgray; border-radius: 15px;visibility:hidden">
-					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
-					<div class="row">
-					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="  Insira a mensagem" type="text">				
-					</div>
-					</div>
-					</div>
+				<div class="col-md-4" style="padding:20px; ">
 				</div>
-				</div>				
+				<div id="container_footer" class="col-md-8" style="padding:20px; ">
+					<div class="d-flex justify-content-center d-flex align-items-center" style="overflow:hidden;border-radius:20px 20px 20px 20px;height:5.5vh;background-image:linear-gradient(to right, #8A2BE2, #4A8BF1);">
+						<input class="rainbow input" type="text" style="height:4.5vh;border-radius:20px;background-color:#333;outline:none;width:98%;border:0px;color:white" placeholder="Send your message">
+					</div>
+				</div>		
+				</div>
+						
 		</div>
 		<!--Para telemovel-->
 		<?php
@@ -316,16 +415,12 @@ function openchatroom_tele() {
 				</div>
 			</div>';
 			?>
-				<div class="row" style="height:10vh;">
-				<div class="col-md-12" style="background:darkgray; border-radius: 15px;">
-					<div class="container-fluid align-items-end" style=" padding:10px 0px 0px; position:relative; bottom:0px">
-					<div class="row">
-					<div class="col-md-12" align="right">
-					<input style="border-radius:20px 20px 20px 20px; width:70%;" placeholder="Insira a mensagem" type="text">				
+			<div class="row" style="height:10vh;">
+				<div id="container_footer " class="col-md-12">
+					<div class="d-flex justify-content-center d-flex align-items-center" style="overflow:hidden;border-radius:20px 20px 20px 20px;height:5.5vh;background-image:linear-gradient(to right, #8A2BE2, #4A8BF1);">
+						<input class="rainbow input" type="text" style="height:4.5vh;border-radius:20px;background-color:#333;outline:none;width:97%;border:0px;color:white" placeholder="Send your message">
 					</div>
-					</div>
-					</div>
-				</div>
+				</div>	
 				</div>
 			</div>					
 		</div>

@@ -46,6 +46,7 @@ function News(){
 			{
 				$Title = $registo["title"];
 				$Content = $registo["content"];
+				$mini_content = $registo["mini_content"];
 				$Image = $registo["image"];
 			}
 				

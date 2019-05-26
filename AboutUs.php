@@ -66,16 +66,16 @@
 		<div class="container-fluid d-none d-md-block" style="overflow:hidden">
 				<div class="row">
 					<div class="col-md-12" style="overflow:hidden">
-							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Our Team <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
+							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Os Grandes <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
 							<div class="container-fluid" style="height:53vh;">
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw">
+							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw;border-radius:5px;">
 							<p style="color:white;">Danilo Almeida</p>
 							<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> Danilo made us the best design ever..</p>
 							</div>
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw">
+							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw;border-radius:5px;">
 							<p style="color:white">Gabriel Fontes</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This dude did all the conections to the database, the database itself, a bot and worked in java functions.</p>
 							</div>
@@ -84,17 +84,17 @@
 							<div class="container-fluid" style="height:50vh;">
 							<div class="row">
 							<div class="col-md-4 text-center">
-							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw">
+							<img src="Imagens/new_york.jpg" style="height:40vh;width:30vw;border-radius:5px;">
 							<p style="color:white">Inês Moreira</p>
 							<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This woman did our Android application alone because is coworker didnt want to help her</p>
 							</div>
 							<div class="col-md-4 text-center">
-							<img src="Imagens/Carrot.png" style="height:40vh;width:30vw">
+							<img src="Imagens/Carrot.png" style="height:40vh;width:30vw;border-radius:5px;">
 							<p style="color:white">André Marques</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This guy did some java animations and was responsable for the ideas of our site</p>
 							</div>
 							<div class="col-md-4 text-center">
-							<img src="Imagens/Snake.jpeg" style="height:40vh;width:30vw">
+							<img src="Imagens/Snake.jpeg" style="height:40vh;width:30vw;border-radius:5px;">
 							<p style="color:white">Vasco</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> Just Empty</p>
 							</div>
@@ -112,39 +112,39 @@
 			<div class="container-fluid d-sm-none" style="overflow:hidden">
 				<div class="row">
 					<div class="col-md-12" style="overflow:hidden">
-							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Our Team <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
+							<h1 class="align-middle" style="color:#69E0DC;height:12vh;text-align:center; margin-top:2vh"> Os Grandes <hr style="background-color: white; width:25%; border-radius:50px;"> </h1>
 							<div class="container-fluid" style="overflow:hidden;">
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:25vh">
+							<img src="Imagens/new_york.jpg" style="height:25vh;width:60%;border-radius:5px;">
 							<p style="color:white">Danilo</p>
 							<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> Danilo made us the best design ever, however he is a bit Gay, but we like Him anyway.</p>
 							</div>
 							</div>
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:25vh">
+							<img src="Imagens/new_york.jpg" style="height:25vh;width:60%;border-radius:5px;">
 							<p style="color:white">Gabriel Fontes</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This dude did all the conections to the database, the database itself, a bot and worked in java functions.</p>
 							</div>
 							</div>
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:25vh">
+							<img src="Imagens/new_york.jpg" style="height:25vh;width:60%;border-radius:5px;">
 							<p style="color:white">Inês Moreira</p>
 							<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This woman did our Android application alone because is coworker didnt want to help her</p>
 							</div>
 							</div>
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:25vh">
+							<img src="Imagens/Carrot.png" style="height:25vh;width:60%;border-radius:5px;">
 							<p style="color:white">André Marques</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%"> This guy did some java animations and was responsable for the ideas of our site</p>
 							</div>
 							</div>
 							<div class="row">
 							<div class="col-md-6 text-center">
-							<img src="Imagens/new_york.jpg" style="height:25vh">
+							<img src="Imagens/Snake.jpeg" style="height:25vh;width:60%;border-radius:5px;">
 							<p style="color:white">Vasco</p>
 								<p style="font-size:10px; color:white;margin-top:-2%;max-width:50%;margin-left:25%">Just Empty</p>
 							</div>
